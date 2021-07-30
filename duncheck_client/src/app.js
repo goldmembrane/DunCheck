@@ -19,6 +19,13 @@ const App = () => {
                     그림(드랍다운 메뉴)
                 </div>
             </div>
+            <div className = 'menu-bar-container'>
+                <ul className = 'menu-bar'>
+                    <li className = 'menu'>장비 마부</li>
+                    <li className = 'menu'>아바타</li>
+                    <li className = 'menu'>딜 컷</li>
+                </ul>
+            </div>
         </>
     )
 }
