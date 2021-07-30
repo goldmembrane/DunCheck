@@ -26,6 +26,12 @@ const App = () => {
                     <li className = 'menu'>딜 컷</li>
                 </ul>
             </div>
+            <div className = 'search-bar-container'>
+                <div className = 'search-bar-box'>
+                    <input type = 'text' className = 'search-bar' />
+                    <button className = 'search-button'>검색</button>
+                </div>
+            </div>
         </>
     )
 }
