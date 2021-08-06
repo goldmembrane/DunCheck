@@ -39,6 +39,7 @@ const App = () => {
             <Router>
                 <Switch>
                     <Route exact path = '/' />
+                    <Route path = '/setting' component = {Setting} />
                 </Switch>
             </Router>
         </>
