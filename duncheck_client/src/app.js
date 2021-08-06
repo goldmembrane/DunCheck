@@ -36,6 +36,9 @@ const App = () => {
                 <div className = 'show-api-box'>
                     copyright by Neople
                 </div>
+                <div className = 'notice-board-box'>
+                    notice board
+                </div>
             </div>
         </>
     )
