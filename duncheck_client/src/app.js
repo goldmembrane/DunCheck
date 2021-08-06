@@ -32,6 +32,14 @@ const App = () => {
                     <button className = 'search-button'>검색</button>
                 </div>
             </div>
+            <div className = 'main-footer-container'>
+                <div className = 'show-api-box'>
+                    copyright by Neople
+                </div>
+                <div className = 'notice-board-box'>
+                    notice board
+                </div>
+            </div>
         </>
     )
 }
