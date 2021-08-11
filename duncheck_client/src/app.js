@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Setting from './container/Setting'
 
 const App = () => {
@@ -19,10 +19,9 @@ const App = () => {
                         로그인
                     </div>
                     <div className = 'additional-function'>
-                        그림(드랍다운 메뉴)
+                        <Link to = '/setting' style = {{ textDecoration : 'none' }}>설정</Link>
                     </div>
                 </div>
-                <Setting />
                 <div className = 'search-bar-container'>
                     <div className = 'search-bar-box'>
                         <input type = 'text' className = 'search-bar' />
