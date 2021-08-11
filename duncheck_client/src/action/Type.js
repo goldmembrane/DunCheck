@@ -1,0 +1,1 @@
+export const BUFF_SCORE_CUT = 'BUFF_SCORE_CUT'
