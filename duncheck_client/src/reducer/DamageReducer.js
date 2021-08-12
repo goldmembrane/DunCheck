@@ -1,14 +1,20 @@
-import { DAMAGE_CUT } from "../action/Type"
+import { PURE_DAMAGE_CUT } from "../action/Type"
+import { SYNERGY_DAMAGE_CUT } from "../action/Type"
 
 const initialState = {
-    damage: 0
+    pureDamage: 0,
+    synergyDamage: 0,
 }
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case DAMAGE_CUT:
+        case PURE_DAMAGE_CUT:
             return Object.assign({}, state, {
-                damage: action.damage
+                pureDamage: action.pureDamage
+            })
+        case SYNERGY_DAMAGE_CUT:
+            return Object.assign({}, state, {
+                synergyDamage: action.synergyDamage
             })
         default:
             return state
