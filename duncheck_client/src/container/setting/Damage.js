@@ -1,21 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { settingPureDamageCut } from '../../action/PureDamageAction'
+import { settingSynergyDamageCut } from '../../action/SynergyDamageAction'
 
 const Damage = () => {
+
+    const dispatch = useDispatch()
+
+    const [pureDamage, setPureDamage] = useState(0)
+    const [synergyDamage, setSynergyDamage] = useState(0)
+
+    const onPureDamageHandler = (e) => {
+        setPureDamage(e.currentTarget.value)
+    }
+
+    const onSynergyDamageHandler = (e) => {
+        setSynergyDamage(e.currentTarget.value)
+    }
+
+    const onSubmitDamageHandler = (e) => {
+        e.preventDefault()
+        let pureDeal = {
+            pureDamage: pureDamage,
+        }
+
+        let synergyDeal = {
+            synergyDamage: synergyDamage,
+        }
+
+        dispatch(settingPureDamageCut(pureDeal))
+        dispatch(settingSynergyDamageCut(synergyDeal))
+    }
+
     return(
         <>
             <div className = 'deal-cut-title-box'>
                 <div className = 'deal-cut-title'>딜러 컷 설정</div>
-                <div className = 'deal-cut-container'>
-                    <div className = 'pure-dealer-cut-content'>
-                        <span>퓨딜 딜 컷 : </span>
-                        <input type = 'number' className = 'pure-dealer-cut' />
+                <form
+                    onSubmit = {onSubmitDamageHandler}>
+                    <div className = 'deal-cut-container'>
+                        <div className = 'pure-dealer-cut-content'>
+                            <span>퓨딜 딜 컷 : </span>
+                            <input type = 'number' className = 'pure-dealer-cut' onChange = {onPureDamageHandler}/>
+                        </div>
+                        <div className = 'synergy-dealer-cut-content'>
+                            <span>시너지 딜 컷 : </span>
+                            <input type = 'number' className = 'synergy-dealer-cut' onChange = {onSynergyDamageHandler}/>
+                        </div>
                     </div>
-                    <div className = 'synergy-dealer-cut-content'>
-                        <span>시너지 딜 컷 : </span>
-                        <input type = 'number' className = 'synergy-dealer-cut' />
-                    </div>
-                </div>
-                <button className = 'dealer-cut-setting'>설정</button>
+                    <button type = 'submit'>설정</button>
+                </form>
             </div>
         </>
     )

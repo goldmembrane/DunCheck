@@ -1,5 +1,6 @@
 export const BUFF_SCORE_CUT = 'BUFF_SCORE_CUT'
-export const DAMAGE_CUT = 'DAMAGE_CUT'
+export const PURE_DAMAGE_CUT = 'PURE_DAMAGE_CUT'
+export const SYNERGY_DAMAGE_CUT = 'SYNERGY_DAMAGE_CUT'
 export const AVATAR_CUT = 'AVATAR_CUT'
 export const CREATURE_CUT = 'CREATURE_CUT'
 export const TALISMAN_CUT = 'TALISMAN_CUT'

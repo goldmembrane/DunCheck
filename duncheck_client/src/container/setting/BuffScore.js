@@ -10,7 +10,6 @@ const BuffScore = () => {
 
     const onBuffScoreHandler = (e) => {
         setBuffScore(e.currentTarget.value)
-        console.log(buffScore)
     }
 
     const onSubmitBuffScoreHandler = (e) => {
