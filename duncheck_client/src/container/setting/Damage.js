@@ -41,11 +41,11 @@ const Damage = () => {
                     <div className = 'deal-cut-container'>
                         <div className = 'pure-dealer-cut-content'>
                             <span>퓨딜 딜 컷 : </span>
-                            <input type = 'number' className = 'pure-dealer-cut' onChange = {onPureDamageHandler}/>
+                            <input type = 'number' value = {pureDamage} className = 'pure-dealer-cut' onChange = {onPureDamageHandler}/>
                         </div>
                         <div className = 'synergy-dealer-cut-content'>
                             <span>시너지 딜 컷 : </span>
-                            <input type = 'number' className = 'synergy-dealer-cut' onChange = {onSynergyDamageHandler}/>
+                            <input type = 'number' value = {synergyDamage} className = 'synergy-dealer-cut' onChange = {onSynergyDamageHandler}/>
                         </div>
                     </div>
                     <button type = 'submit'>설정</button>

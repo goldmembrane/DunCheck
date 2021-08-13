@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { settingAvatarCut } from '../../action/AvatarAction'
 
 const Avatar = () => {
+
+    const [avatarCheck, setAvatarCheck] = useState(false)
+
+    const dispatch = useDispatch()
+
+    const onAvatarCheckHandler = () => {
+        setAvatarCheck(!avatarCheck)
+    }
+
+    const onSubmitAvatarCheckHandler = (e) => {
+        e.preventDefault()
+        let avatar = {
+            avatar: avatarCheck
+        }
+        dispatch(settingAvatarCut(avatar))
+    }
+
     return (
         <>
             <div className = 'avatar-cut-box'>
                 <div className = 'avatar-cut-title'>아바타 컷 설정</div>
-                <span>딜 플티 체크 여부 : </span>
-                <input type = 'checkbox'className = 'avatar-check' />
-                <button className = 'avatar-cut-setting'>설정</button>
+                <form
+                    onSubmit = {onSubmitAvatarCheckHandler}>
+                    <span>딜 플티 체크 여부 : </span>
+                    <input type = 'checkbox'id = 'avatar-check' checked = {avatarCheck} onChange = {onAvatarCheckHandler}/>
+                    <button type = 'submit'>설정</button>
+                </form>
             </div>
         </>
     )
