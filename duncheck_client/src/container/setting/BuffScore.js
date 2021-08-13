@@ -20,7 +20,6 @@ const BuffScore = () => {
         dispatch(settingBuffScoreCut(body))
     }
 
-
     return(
         <>
             <div className = 'buff-cut-title-box'>
