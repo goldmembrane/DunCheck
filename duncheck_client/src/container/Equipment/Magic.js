@@ -1,6 +1,102 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 const Magic = () => {
+
+    const dispatch = useDispatch()
+
+    const [weapon, setWeapon] = useState(0)
+    const [shirt, setShirt] = useState(0)
+    const [pants, setPants] = useState(0)
+    const [shoulder, setShoulder] = useState(0)
+    const [shoes, setShoes] = useState(0)
+    const [armlet, setArmlet] = useState(0)
+    const [necklace, setNecklace] = useState(0)
+    const [ring, setRing] = useState(0)
+    const [auxiliary, setAuxiliary] = useState(0)
+    const [magicstone, setMagicstone] = useState(0)
+    const [earling, setEarling] = useState(0)
+
+    const onWeaponHandler = (e) => {
+        setWeapon(e.currentTarget.value)
+    }
+
+    const onShirtHandler = (e) => {
+        setShirt(e.currentTarget.value)
+    }
+
+    const onPantsHandler = (e) => {
+        setPants(e.currentTarget.value)
+    }
+
+    const onShoulderHandler = (e) => {
+        setShoulder(e.currentTarget.value)
+    }
+
+    const onShoesHandler = (e) => {
+        setShoes(e.currentTarget.value)
+    }
+
+    const onArmletHandler = (e) => {
+        setArmlet(e.currentTarget.value)
+    }
+
+    const onNecklaceHandler = (e) => {
+        setNecklace(e.currentTarget.value)
+    }
+
+    const onRingHandler = (e) => {
+        setRing(e.currentTarget.value)
+    }
+
+    const onAuxiliaryHandler = (e) => {
+        setAuxiliary(e.currentTarget.value)
+    }
+
+    const onMagicstoneHandler = (e) => {
+        setMagicstone(e.currentTarget.value)
+    }
+
+    const onEarlingHandler = (e) => {
+        setEarling(e.currentTarget.value)
+    }
+
+    const onSubmitMagicHandler = (e) => {
+        e.preventDefault()
+        let weaponMagic = {
+            weapon : weapon
+        }
+        let shirtMagic = {
+            shirt: shirt
+        }
+        let pantsMagic = {
+            pants: pants
+        }
+        let shoulderMagic = {
+            shoulder: shoulder
+        }
+        let shoesMagic = {
+            shoes: shoes
+        }
+        let armletMagic = {
+            armlet: armlet
+        }
+        let necklaceMagic = {
+            necklace: necklace
+        }
+        let ringMagic = {
+            ring: ring
+        }
+        let auxiliaryMagic = {
+            auxiliary: auxiliary
+        }
+        let magicstoneMagic = {
+            magicstone: magicstone
+        }
+        let earlingMagic = {
+            earling: earling
+        }
+    }
     return (
         <>
             <div className = 'magic-cut-box'>
