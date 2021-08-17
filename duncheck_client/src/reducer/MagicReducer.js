@@ -1,4 +1,4 @@
-import { WEAPON_MAGIC_CUT, SHIRT_MAGIC_CUT, PANTS_MAGIC_CUT, SHOULDER_MAGIC_CUT, SHOES_MAGIC_CUT, ARMLET_MAGIC_CUT, NECKLACE_MAGIC_CUT, RING_MAGIC_CUT, AUXILIARY_MAGIC_CUT, MAGICSTONE_MAGIC_CUT, EARLING_MAGIC_CUT } from '../action/Type'
+import { WEAPON_MAGIC_CUT, SHIRT_MAGIC_CUT, PANTS_MAGIC_CUT, SHOULDER_MAGIC_CUT, SHOES_MAGIC_CUT, ARMLET_MAGIC_CUT, NECKLACE_MAGIC_CUT, RING_MAGIC_CUT, AUXILIARY_MAGIC_CUT, MAGICSTONE_MAGIC_CUT, EARLING_MAGIC_CUT, FULL_CRITICAL_CUT } from '../action/Type'
 
 const initialState = {
     weapon : 0,
@@ -12,6 +12,7 @@ const initialState = {
     auxiliary: 0,
     magicstone: 0,
     earling: 0,
+    critical: false
 }
 
 export default function(state = initialState, action) {
@@ -59,6 +60,10 @@ export default function(state = initialState, action) {
         case EARLING_MAGIC_CUT:
             return Object.assign({}, state, {
                 earling: action.earling
+            })
+        case FULL_CRITICAL_CUT:
+            return Object.assign({}, state, {
+                critical: action.critical
             })
     }
 }
