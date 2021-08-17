@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut } from '../../action/MagicAction'
+import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut, settingFullCriticalCut } from '../../action/MagicAction'
 
 const Magic = () => {
 
@@ -17,6 +17,7 @@ const Magic = () => {
     const [auxiliary, setAuxiliary] = useState(0)
     const [magicstone, setMagicstone] = useState(0)
     const [earling, setEarling] = useState(0)
+    const [fullCritical, setFullCritical] = useState(false)
 
     const onWeaponHandler = (e) => {
         setWeapon(e.currentTarget.value)
@@ -62,6 +63,10 @@ const Magic = () => {
         setEarling(e.currentTarget.value)
     }
 
+    const onCheckFullCriticalHandler = () => {
+        setFullCritical(!fullCritical)
+    }
+
     const onSubmitMagicHandler = (e) => {
         e.preventDefault()
         let weaponMagic = {
@@ -97,6 +102,10 @@ const Magic = () => {
         let earlingMagic = {
             earling: earling
         }
+        let fullCriticalCheck = {
+            critical: fullCritical
+        }
+
         dispatch(settingWeaponCut(weaponMagic))
         dispatch(settingShirtCut(shirtMagic))
         dispatch(settingPantsCut(pantsMagic))
@@ -108,6 +117,7 @@ const Magic = () => {
         dispatch(settingAuxiliaryCut(auxiliaryMagic))
         dispatch(settingMagicstoneCut(magicstoneMagic))
         dispatch(settingEarlingCut(earlingMagic))
+        dispatch(settingFullCriticalCut(fullCriticalCheck))
     }
     return (
         <>
@@ -162,7 +172,7 @@ const Magic = () => {
                         </div>
                         <div className = 'full-critical-check-box'>
                             <span>만크 여부 : </span>
-                            <input type = 'checkbox' className = 'full-critical-check' />
+                            <input type = 'checkbox' className = 'full-critical-check' onChange = {onCheckFullCriticalHandler}/>
                         </div>
                     </div>
                     <button type = 'submit'>설정</button>

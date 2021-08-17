@@ -1,4 +1,4 @@
-import { WEAPON_MAGIC_CUT, SHIRT_MAGIC_CUT, PANTS_MAGIC_CUT, SHOULDER_MAGIC_CUT, SHOES_MAGIC_CUT, ARMLET_MAGIC_CUT, NECKLACE_MAGIC_CUT, RING_MAGIC_CUT, AUXILIARY_MAGIC_CUT, MAGICSTONE_MAGIC_CUT, EARLING_MAGIC_CUT } from "./Type"
+import { WEAPON_MAGIC_CUT, SHIRT_MAGIC_CUT, PANTS_MAGIC_CUT, SHOULDER_MAGIC_CUT, SHOES_MAGIC_CUT, ARMLET_MAGIC_CUT, NECKLACE_MAGIC_CUT, RING_MAGIC_CUT, AUXILIARY_MAGIC_CUT, MAGICSTONE_MAGIC_CUT, EARLING_MAGIC_CUT, FULL_CRITICAL_CUT } from "./Type"
 
 export const settingWeaponCut = (weapon) => {
     return {
@@ -74,5 +74,12 @@ export const settingEarlingCut = (earling) => {
     return {
         type: EARLING_MAGIC_CUT,
         paylaod: earling
+    }
+}
+
+export const settingFullCriticalCut = (critical) => {
+    return {
+        type: FULL_CRITICAL_CUT,
+        payload: critical
     }
 }
