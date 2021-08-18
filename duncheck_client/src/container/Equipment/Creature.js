@@ -4,7 +4,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import { useDispatch } from 'react-redux'
 import { settingCreatureCut } from '../../action/CreatureAction'
 
-const Creature = () => {
+const Creature = (props) => {
 
     const [creature, setCreature] = useState('')
 
@@ -42,7 +42,7 @@ const Creature = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                    <button className = 'creature-cut-setting'>확인</button>
+                    <button type = 'submit' onClick = {() => props.history.push('/setting/equipment/talisman')}>확인</button>
                 </form>
             </div>
         </>

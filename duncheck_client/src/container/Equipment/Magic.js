@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut, settingFullCriticalCut, settingStyleCut } from '../../action/MagicAction'
 
-const Magic = () => {
+const Magic = (props) => {
 
     const dispatch = useDispatch()
 
@@ -189,7 +189,7 @@ const Magic = () => {
                             <input type = 'checkbox' className = 'full-critical-check' onChange = {onCheckFullCriticalHandler}/>
                         </div>
                     </div>
-                    <button type = 'submit'>확인</button>
+                    <button type = 'submit' onClick = {() => props.history.push('/setting/equipment/avatar')}>확인</button>
                 </form>
             </div>
         </>
