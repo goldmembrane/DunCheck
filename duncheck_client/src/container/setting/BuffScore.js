@@ -29,7 +29,7 @@ const BuffScore = () => {
                         onSubmit = {onSubmitBuffScoreHandler}>
                         <span>버프력 : </span>
                         <input type = 'number' value = {buffScore} onChange = {onBuffScoreHandler} />
-                        <button type = 'submit'>설정</button>
+                        <button type = 'submit'>확인</button>
                     </form>
                 </div>
             </div>

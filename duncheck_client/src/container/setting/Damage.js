@@ -48,7 +48,7 @@ const Damage = () => {
                             <input type = 'number' value = {synergyDamage} className = 'synergy-dealer-cut' onChange = {onSynergyDamageHandler}/>
                         </div>
                     </div>
-                    <button type = 'submit'>설정</button>
+                    <button type = 'submit'>확인</button>
                 </form>
             </div>
         </>
