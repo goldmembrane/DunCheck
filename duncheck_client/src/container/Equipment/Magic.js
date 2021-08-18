@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut, settingFullCriticalCut } from '../../action/MagicAction'
+import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut, settingFullCriticalCut, settingStyleCut } from '../../action/MagicAction'
 
 const Magic = () => {
 
     const dispatch = useDispatch()
 
+    const [style, setStyle] = useState(0)
     const [weapon, setWeapon] = useState(0)
     const [shirt, setShirt] = useState(0)
     const [pants, setPants] = useState(0)
@@ -18,6 +19,10 @@ const Magic = () => {
     const [magicstone, setMagicstone] = useState(0)
     const [earling, setEarling] = useState(0)
     const [fullCritical, setFullCritical] = useState(false)
+
+    const onStyleHandler = (e) => {
+        setStyle(e.currentTarget.value)
+    }
 
     const onWeaponHandler = (e) => {
         setWeapon(e.currentTarget.value)
@@ -69,6 +74,10 @@ const Magic = () => {
 
     const onSubmitMagicHandler = (e) => {
         e.preventDefault()
+
+        let styleCut = {
+            style : style
+        }
         let weaponMagic = {
             weapon : weapon
         }
@@ -106,6 +115,7 @@ const Magic = () => {
             critical: fullCritical
         }
 
+        dispatch(settingStyleCut(styleCut))
         dispatch(settingWeaponCut(weaponMagic))
         dispatch(settingShirtCut(shirtMagic))
         dispatch(settingPantsCut(pantsMagic))
@@ -126,6 +136,10 @@ const Magic = () => {
                 <form
                     onSubmit = {onSubmitMagicHandler}>
                     <div className = 'magic-cut-container'>
+                        <div className = 'style-cut'>
+                            <span>칭호 : </span>
+                            <input type = 'number' className = 'style-cut' onChange = {onStyleHandler} />
+                        </div>
                         <div className = 'weapon-magic'>
                             <span>무기 : </span>
                             <input type = 'number' className = 'weapon-magic-cut' onChange = {onWeaponHandler}/>
