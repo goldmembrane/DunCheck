@@ -5,7 +5,7 @@ import Damage from './setting/Damage'
 import BuffScore from './setting/BuffScore'
 
 
-const Setting = () => {
+const Setting = (props) => {
     return( 
         <>
             <Router>
@@ -21,6 +21,7 @@ const Setting = () => {
                     <Route path = '/setting/damage' component = {Damage} />
                     <Route path = '/setting/buffscore' component = {BuffScore} />
                 </Switch>
+                <button className = 'finish-button' onClick = {() => props.history.push('/')}>완료</button>
             </Router>
         </>
     )

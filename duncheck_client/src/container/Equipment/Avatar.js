@@ -28,7 +28,7 @@ const Avatar = () => {
                     onSubmit = {onSubmitAvatarCheckHandler}>
                     <span>딜 플티 체크 여부 : </span>
                     <input type = 'checkbox'id = 'avatar-check' checked = {avatarCheck} onChange = {onAvatarCheckHandler}/>
-                    <button type = 'submit'>설정</button>
+                    <button type = 'submit'>확인</button>
                 </form>
             </div>
         </>

@@ -42,7 +42,7 @@ const Creature = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
-                    <button className = 'creature-cut-setting'>설정</button>
+                    <button className = 'creature-cut-setting'>확인</button>
                 </form>
             </div>
         </>

@@ -189,7 +189,7 @@ const Magic = () => {
                             <input type = 'checkbox' className = 'full-critical-check' onChange = {onCheckFullCriticalHandler}/>
                         </div>
                     </div>
-                    <button type = 'submit'>설정</button>
+                    <button type = 'submit'>확인</button>
                 </form>
             </div>
         </>
