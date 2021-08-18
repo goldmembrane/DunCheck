@@ -27,7 +27,7 @@ const Talisman = () => {
                     onSubmit = {onSubmitTalismanCheckHandler}>
                     <span>올 카펠라 체크 여부 : </span>
                     <input type = 'checkbox' className = 'talisman-cut-check' onChange = {onTalismanCheckHandler}/>
-                    <button type = 'submit'>설정</button>
+                    <button type = 'submit'>확인</button>
                 </form>
             </div>
         </>

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { settingPureDamageCut } from '../../action/PureDamageAction'
 import { settingSynergyDamageCut } from '../../action/SynergyDamageAction'
 
-const Damage = () => {
+const Damage = (props) => {
 
     const dispatch = useDispatch()
 
@@ -48,7 +48,7 @@ const Damage = () => {
                             <input type = 'number' value = {synergyDamage} className = 'synergy-dealer-cut' onChange = {onSynergyDamageHandler}/>
                         </div>
                     </div>
-                    <button type = 'submit'>설정</button>
+                    <button type = 'submit' onClick = {() => props.history.push('/setting/buffscore')}>확인</button>
                 </form>
             </div>
         </>

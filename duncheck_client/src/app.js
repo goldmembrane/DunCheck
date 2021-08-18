@@ -22,6 +22,12 @@ const App = () => {
                         <Link to = '/setting' style = {{ textDecoration : 'none' }}>설정</Link>
                     </div>
                 </div>
+                <div className = 'setting-container'>
+                    <Switch>
+                        <Route exact path = '/' />
+                        <Route path = '/setting' component = {Setting} />
+                    </Switch>
+                </div>
                 <div className = 'search-bar-container'>
                     <div className = 'search-bar-box'>
                         <input type = 'text' className = 'search-bar' />
@@ -36,10 +42,6 @@ const App = () => {
                         notice board
                     </div>
                 </div>
-                <Switch>
-                    <Route exact path = '/' />
-                    <Route path = '/setting' component = {Setting} />
-                </Switch>
             </Router>
         </>
     )
