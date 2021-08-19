@@ -61,12 +61,20 @@ const Magic = (props) => {
         setOpenStyle(true)
     }
 
+    const closeStyleModal = () => {
+        setOpenStyle(false)
+    }
+
     const onStyleHandler = (e) => {
         setStyle(e.currentTarget.value)
     }
     
     const openWeaponModal = () => {
         setOpenWeapon(true)
+    }
+
+    const closeWeaponModal = () => {
+        setOpenWeapon(false)
     }
 
     const onWeaponHandler = (e) => {
@@ -77,12 +85,20 @@ const Magic = (props) => {
         setOpenShirt(true)
     }
 
+    const closeShirtModal = () => {
+        setOpenShirt(false)
+    }
+
     const onShirtHandler = (e) => {
         setShirt(e.currentTarget.value)
     }
 
     const openPantsModal = () => {
         setOpenPants(true)
+    }
+
+    const closePantsModal = () => {
+        setOpenPants(false)
     }
 
     const onPantsHandler = (e) => {
@@ -93,12 +109,20 @@ const Magic = (props) => {
         setOpenShoulder(true)
     }
 
+    const closeShoulderModal = () => {
+        setOpenShoulder(false)
+    }
+
     const onShoulderHandler = (e) => {
         setShoulder(e.currentTarget.value)
     }
 
     const openShoesModal = () => {
         setOpenShoes(true)
+    }
+
+    const closeShoesModal = () => {
+        setOpenShoes(false)
     }
 
     const onShoesHandler = (e) => {
@@ -109,12 +133,20 @@ const Magic = (props) => {
         setOpenArmlet(true)
     }
 
+    const closeArmletModal = () => {
+        setOpenArmlet(false)
+    }
+
     const onArmletHandler = (e) => {
         setArmlet(e.currentTarget.value)
     }
 
     const openNecklaceModal = () => {
         setOpenNecklace(true)
+    }
+
+    const closeNecklaceModal = () => {
+        setOpenNecklace(false)
     }
 
     const onNecklaceHandler = (e) => {
@@ -125,12 +157,20 @@ const Magic = (props) => {
         setOpenRing(true)
     }
 
+    const closeRingModal = () => {
+        setOpenRing(false)
+    }
+
     const onRingHandler = (e) => {
         setRing(e.currentTarget.value)
     }
 
     const openAuxiliaryModal = () => {
         setOpenAuxiliary(true)
+    }
+
+    const closeAuxiliaryModal = () => {
+        setOpenAuxiliary(false)
     }
 
     const onAuxiliaryHandler = (e) => {
@@ -141,12 +181,20 @@ const Magic = (props) => {
         setOpenMagicstone(true)
     }
 
+    const closeMagicstoneModal = () => {
+        setOpenMagicstone(false)
+    }
+
     const onMagicstoneHandler = (e) => {
         setMagicstone(e.currentTarget.value)
     }
 
     const openEarlingModal = () => {
         setOpenEarling(true)
+    }
+
+    const closeEarlingModal = () => {
+        setOpenEarling(false)
     }
 
     const onEarlingHandler = (e) => {
@@ -222,52 +270,52 @@ const Magic = (props) => {
                     onSubmit = {onSubmitMagicHandler}>
                     <div className = 'magic-cut-container'>
                         <div className = 'style-cut'>
-                            <span>칭호 : </span>
-                            <input type = 'number' className = 'style-cut' onChange = {onStyleHandler} />
+                            <button onClick = {openStyleModal}>칭호 : {style}</button>
+                            <StyleModal open = {openStyle} close = {closeStyleModal} handle = {onStyleHandler}/>
                         </div>
                         <div className = 'weapon-magic'>
-                            <span>무기 : </span>
-                            <input type = 'number' className = 'weapon-magic-cut' onChange = {onWeaponHandler}/>
+                            <button onClick = {openWeaponModal}>무기 : {weapon}</button>
+                            <WeaponModal open = {openWeapon} close = {closeWeaponModal} handle = {onWeaponHandler}/>
                         </div>
                         <div className = 'shirt-magic'>
-                            <span>상의 : </span>
-                            <input type = 'number' className = 'shirt-magic-cut' onChange = {onShirtHandler}/>
+                            <button onClick = {openShirtModal}>상의 : {shirt}</button>
+                            <ShirtModal open = {openShirt} close = {closeShirtModal} handle = {onShirtHandler}/>
                         </div>
                         <div className = 'pants-magic'>
-                            <span>하의 : </span>
-                            <input type = 'number' className = 'pants-magic-cut' onChange = {onPantsHandler}/>
+                           <button onClick = {openPantsModal}>하의 : {pants}</button>
+                           <PantsModal open = {openPants} close = {closePantsModal} handle = {onPantsHandler}/>
                         </div>
                         <div className = 'shoulder-magic'>
-                            <span>어깨 : </span>
-                            <input type = 'number' className = 'shoulder-magic-cut' onChange = {onShoulderHandler}/>
+                            <button onClick = {openShoulderModal}>어깨 : {shoulder}</button>
+                            <ShoulderModal open = {openShoulder} close = {closeShoulderModal} handle = {onShoulderHandler}/>
                         </div>
                         <div className = 'shoes-magic'>
-                            <span>신발 : </span>
-                            <input type = 'number' className = 'shoes-magic-cut' onChange = {onShoesHandler}/>
+                            <button onClick = {openShoesModal}>신발 : {shoes}</button>
+                            <ShoesModal open = {openShoes} close = {closeShoesModal} handle = {onShoesHandler}/>
                         </div>
                         <div className = 'armlet-magic'>
-                            <span>팔찌 : </span>
-                            <input type = 'number' className = 'armlet-magic-cut' onChange = {onArmletHandler}/>
+                            <button onClick = {openArmletModal}>팔찌 : {armlet}</button>
+                            <ArmletModal open = {openArmlet} close = {closeArmletModal} handle = {onArmletHandler}/>
                         </div>
                         <div className = 'necklace-magic'>
-                            <span>목걸이 : </span>
-                            <input type = 'number' className = 'necklace-magic-cut' onChange = {onNecklaceHandler}/>
+                            <button onClick = {openNecklaceModal}>목걸이 : {necklace}</button>
+                            <NecklaceModal open = {openNecklace} close = {closeNecklaceModal} handle = {onNecklaceHandler}/>
                         </div>
                         <div className = 'ring-magic'>
-                            <span>반지 : </span>
-                            <input type = 'number' className = 'ring-magic-cut' onChange = {onRingHandler}/>
+                            <button onClick = {openRingModal}>반지 : {ring}</button>
+                            <RingModal open = {openRing} close = {closeRingModal} handle = {onRingHandler}/>
                         </div>
                         <div className = 'auxiliary-magic'>
-                            <span>보조장비 : </span>
-                            <input type = 'number' className = 'auxiliary-magic-cut' onChange = {onAuxiliaryHandler}/>
+                            <button onClick = {openAuxiliaryModal}>보조장비 : {auxiliary}</button>
+                            <AuxiliaryModal open = {openAuxiliary} close = {closeAuxiliaryModal} handle = {onAuxiliaryHandler}/>
                         </div>
                         <div className = 'magicstone-magic'>
-                            <span>마법석 : </span>
-                            <input type = 'number' className = 'magicstone-magic-cut' onChange = {onMagicstoneHandler}/>
+                           <button onClick = {openMagicstoneModal}>마법석 : {magicstone}</button>
+                           <MagicstoneModal open = {openMagicstone} close = {closeMagicstoneModal} handle = {onMagicstoneHandler}/>
                         </div>
                         <div className = 'earling-magic'>
-                            <span>귀걸이 : </span>
-                            <input type = 'number' className = 'earling-magic-cut' onChange = {onEarlingHandler}/>
+                           <button onClick = {openEarlingModal}>귀걸이 : {earling}</button>
+                           <EarlingModal open = {openEarling} close = {closeEarlingModal} handle = {onEarlingHandler}/>
                         </div>
                         <div className = 'full-critical-check-box'>
                             <span>만크 여부 : </span>
