@@ -2,66 +2,151 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingWeaponCut, settingShirtCut, settingPantsCut, settingShoulderCut, settingShoesCut, settingArmletCut, settingNecklaceCut, settingRingCut, settingAuxiliaryCut, settingMagicstoneCut, settingEarlingCut, settingFullCriticalCut, settingStyleCut } from '../../action/MagicAction'
 
+import ArmletModal from '../../modal/ArmletModal'
+import AuxiliaryModal from '../../modal/AuxiliaryModal'
+import EarlingModal from '../../modal/EarlingModal'
+import MagicstoneModal from '../../modal/MagicstoneModal'
+import NecklaceModal from '../../modal/NecklaceModal'
+import PantsModal from '../../modal/PantsModal'
+import RingModal from '../../modal/RingModal'
+import ShirtModal from '../../modal/ShirtModal'
+import ShoesModal from '../../modal/ShoesModal'
+import ShoulderModal from '../../modal/ShoulderModal'
+import StyleModal from '../../modal/StyleModal'
+import WeaponModal from '../../modal/WeaponModal'
+
 const Magic = (props) => {
 
     const dispatch = useDispatch()
 
     const [style, setStyle] = useState(0)
+    const [openStyle, setOpenStyle] = useState(false)
+
     const [weapon, setWeapon] = useState(0)
+    const [openWeapon, setOpenWeapon] = useState(false)
+
     const [shirt, setShirt] = useState(0)
+    const [openShirt, setOpenShirt] = useState(false)
+
     const [pants, setPants] = useState(0)
+    const [openPants, setOpenPants] = useState(false)
+
     const [shoulder, setShoulder] = useState(0)
+    const [openShoulder, setOpenShoulder] = useState(false)
+
     const [shoes, setShoes] = useState(0)
+    const [openShoes, setOpenShoes] = useState(false)
+
     const [armlet, setArmlet] = useState(0)
+    const [openArmlet, setOpenArmlet] = useState(false)
+
     const [necklace, setNecklace] = useState(0)
+    const [openNecklace, setOpenNecklace] = useState(0)
+
     const [ring, setRing] = useState(0)
+    const [openRing, setOpenRing] = useState(false)
+
     const [auxiliary, setAuxiliary] = useState(0)
+    const [openAuxiliary, setOpenAuxiliary] = useState(false)
+
     const [magicstone, setMagicstone] = useState(0)
+    const [openMagicstone, setOpenMagicstone] = useState(false)
+
     const [earling, setEarling] = useState(0)
+    const [openEarling, setOpenEarling] = useState(false)
+
     const [fullCritical, setFullCritical] = useState(false)
+
+    const openStyleModal = () => {
+        setOpenStyle(true)
+    }
 
     const onStyleHandler = (e) => {
         setStyle(e.currentTarget.value)
+    }
+    
+    const openWeaponModal = () => {
+        setOpenWeapon(true)
     }
 
     const onWeaponHandler = (e) => {
         setWeapon(e.currentTarget.value)
     }
 
+    const openShirtModal = () => {
+        setOpenShirt(true)
+    }
+
     const onShirtHandler = (e) => {
         setShirt(e.currentTarget.value)
+    }
+
+    const openPantsModal = () => {
+        setOpenPants(true)
     }
 
     const onPantsHandler = (e) => {
         setPants(e.currentTarget.value)
     }
 
+    const openShoulderModal = () => {
+        setOpenShoulder(true)
+    }
+
     const onShoulderHandler = (e) => {
         setShoulder(e.currentTarget.value)
+    }
+
+    const openShoesModal = () => {
+        setOpenShoes(true)
     }
 
     const onShoesHandler = (e) => {
         setShoes(e.currentTarget.value)
     }
 
+    const openArmletModal = () => {
+        setOpenArmlet(true)
+    }
+
     const onArmletHandler = (e) => {
         setArmlet(e.currentTarget.value)
+    }
+
+    const openNecklaceModal = () => {
+        setOpenNecklace(true)
     }
 
     const onNecklaceHandler = (e) => {
         setNecklace(e.currentTarget.value)
     }
 
+    const openRingModal = () => {
+        setOpenRing(true)
+    }
+
     const onRingHandler = (e) => {
         setRing(e.currentTarget.value)
+    }
+
+    const openAuxiliaryModal = () => {
+        setOpenAuxiliary(true)
     }
 
     const onAuxiliaryHandler = (e) => {
         setAuxiliary(e.currentTarget.value)
     }
 
+    const openMagicstoneModal = () => {
+        setOpenMagicstone(true)
+    }
+
     const onMagicstoneHandler = (e) => {
         setMagicstone(e.currentTarget.value)
+    }
+
+    const openEarlingModal = () => {
+        setOpenEarling(true)
     }
 
     const onEarlingHandler = (e) => {
