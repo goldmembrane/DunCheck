@@ -1,9 +1,19 @@
 import React from 'react'
 
-const MagicstoneModal = () => {
+const MagicstoneModal = (props) => {
+
+    const { open, close, handle } = props
+
     return (
-        <>
-        </>
+        <div className = {open ? 'openMagicstoneModal magicstoneModal' : 'magicstoneModal'}>
+            {open ? (
+                <div className = 'magicstoneInputBox'>
+                    <span>마법석 : </span>
+                    <input type = 'number' onChange = {handle} />
+                    <button className = 'settingMagicstone' onClick = {close}>닫기</button>
+                </div>
+            ): null}
+        </div>
     )
 }
 
