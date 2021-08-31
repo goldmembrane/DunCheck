@@ -1,0 +1,50 @@
+.necklaceModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.necklaceInputBox {
+  width: 90%;
+  max-width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.necklaceInput {
+  width: 80%;
+  max-width: 250px;
+  height: 100px;
+  margin: 125px auto;
+}
+
+.necklaceInput > input {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.settingNecklace {
+  display: block;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  border: none;
+  background-color: #00f;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 3px;
+  margin: 100px auto;
+}
+
+.necklaceModal.openNecklaceModal {
+  display: flex;
+  align-items: center;
+}

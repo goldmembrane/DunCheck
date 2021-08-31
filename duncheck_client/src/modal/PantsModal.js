@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Modal/PantsModal.css'
 
 const PantsModal = (props) => {
 
@@ -8,9 +9,11 @@ const PantsModal = (props) => {
         <div className = {open ? 'openPantsModal pantsModal' : 'pantsModal'}>
             {open ? (
                 <div className = 'pantsInputBox'>
-                    <span>하의 : </span>
-                    <input type = 'number' onChange = {handle} />
-                    <button className = 'settingPants' onClick = {close}>닫기</button>
+                    <div className = 'pantsInput'>
+                        <span>하의 : </span>
+                        <input type = 'number' onChange = {handle} />
+                        <button className = 'settingPants' onClick = {close}>닫기</button>
+                    </div>
                 </div>
             ): null}
         </div>
