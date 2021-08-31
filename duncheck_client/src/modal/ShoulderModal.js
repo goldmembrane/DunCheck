@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/Modal/ShoulderModal.css'
 
 const ShoulderModal = (props) => {
 
@@ -8,9 +9,11 @@ const ShoulderModal = (props) => {
         <div className = {open ? 'openShoulderModal shoulderModal' : 'shoulderModal'}>
             {open ? (
                 <div className = 'shoulderInputBox'>
-                    <span>머리어깨 : </span>
-                    <input type = 'number' onChange = {handle} />
-                    <button className = 'settingShoulder' onClick = {close}>닫기</button>
+                    <div className = 'shoulderInput'>
+                        <span>머리어깨 : </span>
+                        <input type = 'number' onChange = {handle} />
+                        <button className = 'settingShoulder' onClick = {close}>닫기</button>
+                    </div>
                 </div>
             ): null}
         </div>
