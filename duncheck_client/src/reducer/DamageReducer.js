@@ -6,7 +6,7 @@ const initialState = {
     synergyDamage: 0,
 }
 
-export default function(state = initialState, action) {
+export default function DamageReducer(state = initialState, action) {
     switch(action.type) {
         case PURE_DAMAGE_CUT:
             return Object.assign({}, state, {

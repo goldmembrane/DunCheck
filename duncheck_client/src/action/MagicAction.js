@@ -59,7 +59,7 @@ export const settingNecklaceCut = (necklace) => {
 export const settingRingCut = (ring) => {
     return {
         type: RING_MAGIC_CUT,
-        paylaod: ring
+        payload: ring
     }
 }
 
@@ -80,7 +80,7 @@ export const settingMagicstoneCut = (magicstone) => {
 export const settingEarlingCut = (earling) => {
     return {
         type: EARLING_MAGIC_CUT,
-        paylaod: earling
+        payload: earling
     }
 }
 

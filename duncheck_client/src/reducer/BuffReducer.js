@@ -4,7 +4,7 @@ const initialState = {
     buffScore: 0
 }
 
-export default function(state = initialState, action) {
+export default function BuffReducer(state = initialState, action) {
     switch(action.type) {
         case BUFF_SCORE_CUT:
             return Object.assign({}, state, {

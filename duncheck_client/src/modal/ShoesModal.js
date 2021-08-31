@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { settingShoesCut } from '../action/MagicAction'
 import '../css/Modal/ShoesModal.css'
 
 const ShoesModal = (props) => {
 
-    const { open, close, handle } = props
+    const dispatch = useDispatch()
+
+    const { open, close } = props
+
+    const [shoes, setShoes] = useState(0)
+
+    const onHandlerShoes = (e) => {
+        setShoes(e.target.value)
+    }
+
+    const onSubmitShoes = () => {
+        let shoesCut = {
+            shoes: shoes
+        }
+
+        dispatch(settingShoesCut(shoesCut))
+    }
 
     return (
         <div className = {open ? 'openShoesModal shoesModal' : 'shoesModal'}>
@@ -11,8 +29,8 @@ const ShoesModal = (props) => {
                 <div className = 'shoesInputBox'>
                     <div className = 'shoesInput'>
                         <span>신발 : </span>
-                        <input type = 'number' onChange = {handle} />
-                        <button className = 'settingShoes' onClick = {close}>닫기</button>
+                        <input type = 'number' onChange = {onHandlerShoes} />
+                        <button className = 'settingShoes' onClick = {() => {onSubmitShoes(); close();}}>닫기</button>
                     </div>
                 </div>
             ): null}

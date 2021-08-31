@@ -16,59 +16,61 @@ const initialState = {
     style: 0,
 }
 
-export default function(state = initialState, action) {
+export default function MagicReducer (state = initialState, action) {
     switch(action.type) {
         case STYLE_CUT:
             return Object.assign({}, state, {
-                style: action.style
+                style: action.payload.style
             })
         case WEAPON_MAGIC_CUT:
             return Object.assign({}, state, {
-                weapon: action.weapon
+                weapon: action.payload.weapon
             })
         case SHIRT_MAGIC_CUT:
             return Object.assign({}, state, {
-                shirt: action.shirt
+                shirt: action.payload.shirt
             })
         case PANTS_MAGIC_CUT:
             return Object.assign({}, state, {
-                pants: action.pants
+                pants: action.payload.pants
             })
         case SHOULDER_MAGIC_CUT:
             return Object.assign({}, state, {
-                shoulder: action.shoulder
+                shoulder: action.payload.shoulder
             })
         case SHOES_MAGIC_CUT:
             return Object.assign({}, state, {
-                shoes: action.shoes
+                shoes: action.payload.shoes
             })
         case ARMLET_MAGIC_CUT:
             return Object.assign({}, state, {
-                armlet: action.armlet
+                armlet: action.payload.armlet
             })
         case NECKLACE_MAGIC_CUT:
             return Object.assign({}, state, {
-                necklace: action.necklace
+                necklace: action.payload.necklace
             })
         case RING_MAGIC_CUT:
             return Object.assign({}, state, {
-                ring: action.ring
+                ring: action.payload.ring
             })
         case AUXILIARY_MAGIC_CUT:
             return Object.assign({}, state, {
-                auxiliary: action.auxiliary
+                auxiliary: action.payload.auxiliary
             })
         case MAGICSTONE_MAGIC_CUT:
             return Object.assign({}, state, {
-                magicstone: action.magicstone
+                magicstone: action.payload.magicstone
             })
         case EARLING_MAGIC_CUT:
             return Object.assign({}, state, {
-                earling: action.earling
+                earling: action.payload.earling
             })
         case FULL_CRITICAL_CUT:
             return Object.assign({}, state, {
-                critical: action.critical
+                critical: action.payload.critical
             })
+        default:
+            return state
     }
 }

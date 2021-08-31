@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { settingNecklaceCut } from '../action/MagicAction'
 import '../css/Modal/NecklaceModal.css'
 
 const NecklaceModal = (props) => {
 
-    const { open, close, handle } = props
+    const dispatch = useDispatch()
+
+    const { open, close } = props
+
+    const [necklace, setNecklace] = useState(0)
+
+    const onHandlerNecklace = (e) => {
+        setNecklace(e.target.value)
+    }
+
+    const onSubmitNecklace = () => {
+        let necklaceCut = {
+            necklace: necklace
+        }
+
+        dispatch(settingNecklaceCut(necklaceCut))
+    }
 
     return (
         <div className = {open ? 'openNecklaceModal necklaceModal' : 'necklaceModal'}>
@@ -11,8 +29,8 @@ const NecklaceModal = (props) => {
                 <div className = 'necklaceInputBox'>
                     <div className = 'necklaceInput'>
                         <span>목걸이 : </span>
-                        <input type = 'number' onChange = {handle} />
-                        <button className = 'settingNecklace' onClick = {close}>닫기</button>
+                        <input type = 'number' onChange = {onHandlerNecklace} />
+                        <button className = 'settingNecklace' onClick = {() => {onSubmitNecklace(); close();}}>닫기</button>
                     </div>
                 </div>
             ): null}
