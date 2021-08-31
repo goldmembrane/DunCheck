@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownButton from 'react-bootstrap/DropdownButton'
 import { useDispatch } from 'react-redux'
 import { settingCreatureCut } from '../../action/CreatureAction'
 
