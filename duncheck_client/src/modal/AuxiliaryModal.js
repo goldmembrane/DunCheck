@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { settingAuxiliaryCut } from '../action/MagicAction'
 import '../css/Modal/AuxiliaryModal.css'
 
 const AuxiliaryModal = (props) => {
 
-    const { open, close, handle } = props
+    const dispatch = useDispatch()
+
+    const { open, close } = props
+
+    const [auxiliary, setAuxiliary] = useState(0)
+
+    const onHandlerAuxiliary = (e) => {
+        setAuxiliary(e.target.value)
+    }
+
+    const onSubmitAuxiliary = () => {
+        let auxiliaryCut = {
+            auxiliary: auxiliary
+        }
+
+        dispatch(settingAuxiliaryCut(auxiliaryCut))
+    }
 
     return (
         <div className = {open ? 'openAuxiliaryModal auxiliaryModal' : 'auxiliaryModal'}>
@@ -11,8 +29,8 @@ const AuxiliaryModal = (props) => {
                 <div className = 'auxiliaryInputBox'>
                     <div className = 'auxiliaryInput'>
                         <span>보조장비 : </span>
-                        <input type = 'number' onChange = {handle} />
-                        <button className = 'settingAuxiliary' onClick = {close}>닫기</button>
+                        <input type = 'number' onChange = {onHandlerAuxiliary} />
+                        <button className = 'settingAuxiliary' onClick = {() => {onSubmitAuxiliary(); close();}}>닫기</button>
                     </div>
                 </div>
             ): null}

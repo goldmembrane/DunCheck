@@ -4,7 +4,7 @@ const initialState = {
     creature: ''
 }
 
-export default function(state = initialState, action) {
+export default function CreatureReducer(state = initialState, action) {
     switch(action.type) {
         case CREATURE_CUT:
             return Object.assign({}, state, {

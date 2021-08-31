@@ -4,7 +4,7 @@ const initialState = {
     avatar: false
 }
 
-export default function( state = initialState, action) {
+export default function AvatarReducer ( state = initialState, action) {
     switch(action.type) {
         case AVATAR_CUT:
             return Object.assign({}, state, {

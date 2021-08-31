@@ -4,6 +4,7 @@ import AvatarReducer from './AvatarReducer'
 import CreatureReducer from './CreatureReducer'
 import DamageReducer from './DamageReducer'
 import TalismanReducer from './TalismanReducer'
+import MagicReducer from "./MagicReducer"
 
 const rootReducer = combineReducers({
     BuffReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     CreatureReducer,
     DamageReducer,
     TalismanReducer,
+    MagicReducer,
 })
 
 export default rootReducer
