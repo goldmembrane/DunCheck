@@ -29,7 +29,7 @@ const WeaponModal = (props) => {
                 <div className = 'weaponInputBox'>
                     <div className = 'weaponInput'>
                         <span>무기 : </span>
-                        <input type = 'number' onChange = {onHandlerWeapon} />
+                        <input type = 'number' onChange = {onHandlerWeapon} value = {weapon}/>
                         <button className = 'settingWeapon' onClick = {() => {onSubmitWeapon(); close();}}>닫기</button>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ const ArmletModal = (props) => {
                 <div className = 'armletInputBox'>
                     <div className = 'armletInput'>
                         <span>팔찌 : </span>
-                        <input type = 'number' onChange = {onHandlerArmlet}/>
+                        <input type = 'number' onChange = {onHandlerArmlet} value = {armlet}/>
                         <button className = 'settingArmlet' onClick = {() => {onSubmitArmlet(); close();}}>닫기</button>
                     </div>
                 </div>

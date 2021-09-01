@@ -29,7 +29,7 @@ const NecklaceModal = (props) => {
                 <div className = 'necklaceInputBox'>
                     <div className = 'necklaceInput'>
                         <span>목걸이 : </span>
-                        <input type = 'number' onChange = {onHandlerNecklace} />
+                        <input type = 'number' onChange = {onHandlerNecklace} value = {necklace}/>
                         <button className = 'settingNecklace' onClick = {() => {onSubmitNecklace(); close();}}>닫기</button>
                     </div>
                 </div>

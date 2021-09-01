@@ -11,8 +11,8 @@ const AvatarModal = (props) => {
 
     const [avatar, setAvatar] = useState(false)
 
-    const onHandlerAvatar = () => {
-        setAvatar(!avatar)
+    const onHandlerAvatar = (e) => {
+        setAvatar(e.target.checked)
     }
 
     const onSubmitAvatar = () => {
@@ -28,7 +28,7 @@ const AvatarModal = (props) => {
                 <div className = 'avatarCheckBox'>
                 <div className = 'avatarCheck'>
                     <span>딜 플티 체크 : </span>
-                    <input type = 'checkbox' onChange = {onHandlerAvatar} />
+                    <input type = 'checkbox' onChange = {onHandlerAvatar} checked = {avatar}/>
                     <button className = 'settingAvatar' onClick = {() => {onSubmitAvatar(); close();}}>닫기</button>
                 </div>
             </div>

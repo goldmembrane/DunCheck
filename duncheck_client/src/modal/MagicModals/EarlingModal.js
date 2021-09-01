@@ -31,7 +31,7 @@ const EarlingModal = (props) => {
                 <div className = 'earlingInputBox'>
                     <div className = 'earlingInput'>
                         <span>귀걸이 : </span>
-                        <input type = 'number' onChange = {onHandlerEarling} />
+                        <input type = 'number' onChange = {onHandlerEarling} value = {earling}/>
                         <button className = 'settingEarling' onClick = {() => {onSubmitEarling(); close();}}>닫기</button>
                     </div>
                 </div>

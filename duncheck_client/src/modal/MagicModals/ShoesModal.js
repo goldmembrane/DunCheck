@@ -29,7 +29,7 @@ const ShoesModal = (props) => {
                 <div className = 'shoesInputBox'>
                     <div className = 'shoesInput'>
                         <span>신발 : </span>
-                        <input type = 'number' onChange = {onHandlerShoes} />
+                        <input type = 'number' onChange = {onHandlerShoes} value = {shoes}/>
                         <button className = 'settingShoes' onClick = {() => {onSubmitShoes(); close();}}>닫기</button>
                     </div>
                 </div>

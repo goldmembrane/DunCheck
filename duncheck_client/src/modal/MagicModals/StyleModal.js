@@ -29,7 +29,7 @@ const StyleModal = (props) => {
                 <div className = 'styleInputBox'>
                     <div className = 'styleInput'>
                         <span>칭호 : </span>
-                        <input type = 'number' onChange = {onHandlerStyle} />
+                        <input type = 'number' onChange = {onHandlerStyle} value = {style}/>
                         <button className = 'settingStyle' onClick = {() => {onSubmitStyle(); close();}}>닫기</button>
                     </div>
                 </div>

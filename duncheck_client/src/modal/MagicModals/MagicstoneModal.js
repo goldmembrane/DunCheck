@@ -29,7 +29,7 @@ const MagicstoneModal = (props) => {
                 <div className = 'magicstoneInputBox'>
                     <div className = 'magicstoneInput'>
                         <span>마법석 : </span>
-                        <input type = 'number' onChange = {onHandlerMagicstone} />
+                        <input type = 'number' onChange = {onHandlerMagicstone} value = {magicstone}/>
                         <button className = 'settingMagicstone' onClick = {() => {onSubmitMagicstone(); close();}}>닫기</button>
                     </div>
                 </div>

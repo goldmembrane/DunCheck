@@ -41,11 +41,11 @@ const DamageModal = (props) => {
                 <div className = 'damageInputBox'>
                 <div className = 'pureDamageInput'>
                     <span>퓨딜 컷 : </span>
-                    <input type = 'number' onChange = {onHandlerPureDamage} />
+                    <input type = 'number' onChange = {onHandlerPureDamage} value = {pureDamage}/>
                 </div>
                 <div className = 'synergyDamageInput'>
                     <span>시너지딜 컷 :</span>
-                    <input type = 'number' onChange = {onHandlerSynergyDamage} />
+                    <input type = 'number' onChange = {onHandlerSynergyDamage} value = {synergyDamage}/>
                 </div>
                 <button className = 'settingDamage' onClick = {() => {onSubmitDamage(); close();}}>닫기</button>
             </div>

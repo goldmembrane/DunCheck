@@ -29,7 +29,7 @@ const ShirtModal = (props) => {
                 <div className = 'shirtInputBox'>
                     <div className = 'shirtInput'>
                         <span>상의 : </span>
-                        <input type = 'number' onChange = {onHandlerShirt} />
+                        <input type = 'number' onChange = {onHandlerShirt} value = {shirt}/>
                         <button className = 'settingShirt' onClick = {() => {onSubmitShirt(); close();}}>닫기</button>
                     </div>
                 </div>
