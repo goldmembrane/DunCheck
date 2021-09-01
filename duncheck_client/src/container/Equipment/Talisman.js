@@ -1,34 +1,24 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { settingTalismanCut } from '../../action/TalismanAction'
+import TalismanModal from '../../modal/EquipmentModals/TalismanModal'
 
 const Talisman = () => {
 
-    const [checkAllTalisman, setCheckAllTalisman] = useState(false)
+    const [openTalisman, setOpenTalisman] = useState(false)
 
-    const dispatch = useDispatch()
-
-    const onTalismanCheckHandler = () => {
-        setCheckAllTalisman(!checkAllTalisman)
+    const openTalismanModal = () => {
+        setOpenTalisman(true)
     }
 
-    const onSubmitTalismanCheckHandler = (e) => {
-        e.preventDefault()
-        let checkTalisman = {
-            talisman: checkAllTalisman
-        }
-        dispatch(settingTalismanCut(checkTalisman))
+    const closeTalismanModal = () => {
+        setOpenTalisman(false)
     }
+    
     return (
         <>
             <div className = 'talisman-cut-box'>
                 <div className = 'talisman-cut-title'>탈리스만 컷 설정</div>
-                <form
-                    onSubmit = {onSubmitTalismanCheckHandler}>
-                    <span>올 카펠라 체크 여부 : </span>
-                    <input type = 'checkbox' className = 'talisman-cut-check' onChange = {onTalismanCheckHandler}/>
-                    <button type = 'submit'>확인</button>
-                </form>
+                <button className = 'open-talisman-modal' onClick = {openTalismanModal}>올 카펠라 체크 여부 : </button>
+                <TalismanModal open = {openTalisman} close = {closeTalismanModal} />
             </div>
         </>
     )

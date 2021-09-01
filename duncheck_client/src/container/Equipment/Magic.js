@@ -201,7 +201,7 @@ const Magic = (props) => {
                             <input type = 'checkbox' className = 'full-critical-check' onChange = {onCheckFullCriticalHandler}/>
                         </div>
                     </div>
-                    <button type = 'submit' onClick = {() => props.history.push('/setting/equipment/avatar')}>확인</button>
+                    <button type = 'submit' onClick = {() => props.history.push('/setting/equipment/avatar')}>다음</button>
             </div>
         </>
     )
