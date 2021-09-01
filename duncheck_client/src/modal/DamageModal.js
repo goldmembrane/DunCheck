@@ -36,7 +36,8 @@ const DamageModal = (props) => {
 
     return (
         <div className = {open ? 'openDamageModal damageModal' : 'damageModal'}>
-            <div className = 'damageInputBox'>
+            {open ? (
+                <div className = 'damageInputBox'>
                 <div className = 'pureDamageInput'>
                     <span>퓨딜 컷 : </span>
                     <input type = 'number' onChange = {onHandlerPureDamage} />
@@ -47,6 +48,7 @@ const DamageModal = (props) => {
                 </div>
                 <button className = 'settingDamage' onClick = {() => {onSubmitDamage(); close();}}>닫기</button>
             </div>
+            ): null}
         </div>
     )
 }

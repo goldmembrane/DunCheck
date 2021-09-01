@@ -1,14 +1,14 @@
 import { CREATURE_CUT } from "../action/Type"
 
 const initialState = {
-    creature: ''
+    creature: 0
 }
 
 export default function CreatureReducer(state = initialState, action) {
     switch(action.type) {
         case CREATURE_CUT:
             return Object.assign({}, state, {
-                creature: action.creature
+                creature: action.payload.creature
             })
         default:
             return state
