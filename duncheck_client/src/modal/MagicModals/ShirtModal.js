@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingShirtCut } from '../../action/MagicAction'
-import '../../css/Modal/ShirtModal.css'
+import '../../css/Modal/MagicModal/ShirtModal.css'
 
 const ShirtModal = (props) => {
 

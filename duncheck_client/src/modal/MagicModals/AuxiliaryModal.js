@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingAuxiliaryCut } from '../../action/MagicAction'
-import '../../css/Modal/AuxiliaryModal.css'
+import '../../css/Modal/MagicModal/AuxiliaryModal.css'
 
 const AuxiliaryModal = (props) => {
 

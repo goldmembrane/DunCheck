@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingCreatureCut } from '../../action/CreatureAction'
+import '../../css/Modal/EquipmentModal/CreatureModal.css'
 
 const CreatureModal = (props) => {
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingBuffScoreCut } from '../action/BuffAction'
+import '../css/Modal/BuffScoreModal.css'
 
 const BuffScoreModal = (props) => {
 
@@ -16,7 +17,7 @@ const BuffScoreModal = (props) => {
 
     const onSubmitBuffScore = () => {
         let buffScoreCut = {
-            buffscore: buffScore
+            buffScore: buffScore
         }
 
         dispatch(settingBuffScoreCut(buffScoreCut))

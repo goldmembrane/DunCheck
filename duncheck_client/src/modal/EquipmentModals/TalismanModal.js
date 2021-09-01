@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingTalismanCut } from '../../action/TalismanAction'
+import '../../css/Modal/EquipmentModal/TalismanModal.css'
 
 const TalismanModal = (props) => {
 
