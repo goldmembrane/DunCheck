@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingMagicstoneCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicstoneModal.css'
+import '../../css/Modal/MagicModal/MagicstoneModal.css'
 
 const MagicstoneModal = (props) => {
 

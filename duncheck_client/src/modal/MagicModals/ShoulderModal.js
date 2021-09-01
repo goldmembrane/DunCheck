@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingShoulderCut } from '../../action/MagicAction'
-import '../../css/Modal/ShoulderModal.css'
+import '../../css/Modal/MagicModal/ShoulderModal.css'
 
 const ShoulderModal = (props) => {
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingRingCut } from '../../action/MagicAction'
-import '../../css/Modal/RingModal.css'
+import '../../css/Modal/MagicModal/RingModal.css'
 
 const RingModal = (props) => {
 

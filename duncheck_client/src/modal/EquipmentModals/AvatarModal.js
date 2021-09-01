@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingAvatarCut } from '../../action/AvatarAction'
+import '../../css/Modal/EquipmentModal/AvatarModal.css'
 
 const AvatarModal = (props) => {
 

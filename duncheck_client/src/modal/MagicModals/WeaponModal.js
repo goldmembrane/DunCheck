@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingWeaponCut } from '../../action/MagicAction'
-import '../../css/Modal/WeaponModal.css'
+import '../../css/Modal/MagicModal/WeaponModal.css'
 
 const WeaponModal = (props) => {
 

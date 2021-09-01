@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingPureDamageCut } from '../action/PureDamageAction'
 import { settingSynergyDamageCut } from '../action/SynergyDamageAction'
+import '../css/Modal/DamageModal.css'
 
 const DamageModal = (props) => {
 
