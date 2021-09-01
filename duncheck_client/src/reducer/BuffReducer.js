@@ -8,7 +8,7 @@ export default function BuffReducer(state = initialState, action) {
     switch(action.type) {
         case BUFF_SCORE_CUT:
             return Object.assign({}, state, {
-                buffScore: action.buffScore
+                buffScore: action.payload.buffScore
             })
         default:
             return state

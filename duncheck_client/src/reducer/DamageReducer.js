@@ -10,11 +10,11 @@ export default function DamageReducer(state = initialState, action) {
     switch(action.type) {
         case PURE_DAMAGE_CUT:
             return Object.assign({}, state, {
-                pureDamage: action.pureDamage
+                pureDamage: action.payload.pureDamage
             })
         case SYNERGY_DAMAGE_CUT:
             return Object.assign({}, state, {
-                synergyDamage: action.synergyDamage
+                synergyDamage: action.payload.synergyDamage
             })
         default:
             return state
