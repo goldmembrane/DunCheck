@@ -8,7 +8,7 @@ export default function AvatarReducer ( state = initialState, action) {
     switch(action.type) {
         case AVATAR_CUT:
             return Object.assign({}, state, {
-                avatar: action.avatar
+                avatar: action.payload.avatar
             })
         default:
             return state

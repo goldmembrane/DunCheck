@@ -1,37 +1,25 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { settingBuffScoreCut } from '../../action/BuffAction'
+import BuffScoreModal from '../../modal/BuffScoreModal'
 
-const BuffScore = () => {
+const BuffScore = (props) => {
 
-    const [buffScore, setBuffScore] = useState(0)
+    const [openBuff, setOpenBuff] = useState(false)
 
-    const dispatch = useDispatch()
-
-    const onBuffScoreHandler = (e) => {
-        setBuffScore(e.currentTarget.value)
+    const openBuffModal = () => {
+        setOpenBuff(true)
     }
 
-    const onSubmitBuffScoreHandler = (e) => {
-        e.preventDefault()
-        let body = {
-            buffScore: buffScore
-        }
-        dispatch(settingBuffScoreCut(body))
+    const closeBuffModal = () => {
+        setOpenBuff(false)
     }
 
     return(
         <>
             <div className = 'buff-cut-title-box'>
                 <div className = 'buff-cut-title'>버프력 컷 설정</div>
-                <div className = 'buff-cut-container'>
-                    <form
-                        onSubmit = {onSubmitBuffScoreHandler}>
-                        <span>버프력 : </span>
-                        <input type = 'number' value = {buffScore} onChange = {onBuffScoreHandler} />
-                        <button type = 'submit'>확인</button>
-                    </form>
-                </div>
+                <button className = 'open-buff-modal' onClick = {openBuffModal}>버프력 컷 : </button>
+                <BuffScoreModal open = {openBuff} close = {closeBuffModal} />
+                <button className = 'go-to-damage' onClick = {() => {props.history.push('/setting/damage')}}>다음</button>
             </div>
         </>
     )
