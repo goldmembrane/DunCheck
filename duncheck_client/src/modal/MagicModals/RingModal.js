@@ -29,7 +29,7 @@ const RingModal = (props) => {
                 <div className = 'ringInputBox'>
                     <div className = 'ringInput'>
                         <span>반지 : </span>
-                        <input type = 'number' onChange = {onHandlerRing} />
+                        <input type = 'number' onChange = {onHandlerRing} value = {ring}/>
                         <button className = 'settingRing' onClick = {() => {onSubmitRing(); close();}}>닫기</button>
                     </div>
                 </div>

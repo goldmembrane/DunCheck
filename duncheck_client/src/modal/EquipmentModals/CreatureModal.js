@@ -29,7 +29,7 @@ const CreatureModal = (props) => {
                 <div className = 'creatureInputBox'>
                     <div className = 'creatureInput'>
                         <span>크리쳐 : </span>
-                        <input type = 'number' onChange = {onHandlerCreature} />
+                        <input type = 'number' onChange = {onHandlerCreature} value = {creature}/>
                         <span>%</span>
                         <button className = 'settingCreature' onClick = {() => {onSubmitCreature(); close();}}>댣기</button>    
                     </div>

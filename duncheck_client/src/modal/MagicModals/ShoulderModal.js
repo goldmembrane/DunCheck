@@ -29,7 +29,7 @@ const ShoulderModal = (props) => {
                 <div className = 'shoulderInputBox'>
                     <div className = 'shoulderInput'>
                         <span>머리어깨 : </span>
-                        <input type = 'number' onChange = {onHandlerShoulder} />
+                        <input type = 'number' onChange = {onHandlerShoulder} value = {shoulder}/>
                         <button className = 'settingShoulder' onClick = {() => {onSubmitShoulder(); close();}}>닫기</button>
                     </div>
                 </div>

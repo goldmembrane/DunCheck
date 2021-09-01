@@ -11,8 +11,8 @@ const TalismanModal = (props) => {
 
     const [talisman, setTalisman] = useState(false)
 
-    const onHandlerTalisman = () => {
-        setTalisman(!talisman)
+    const onHandlerTalisman = (e) => {
+        setTalisman(e.target.checked)
     }
 
     const onSubmitTalisman = () => {
@@ -29,7 +29,7 @@ const TalismanModal = (props) => {
                 <div className = 'talismanCheckBox'>
                     <div className = 'talismanCheck'>
                         <span>올 카펠라 체크 여부 : </span>
-                        <input type = 'checkbox' onChange = {onHandlerTalisman} />
+                        <input type = 'checkbox' onChange = {onHandlerTalisman} checked = {talisman}/>
                         <button className = 'settingTalisman' onClick = {() => {onSubmitTalisman(); close();}}>닫기</button>
                     </div>
                 </div>

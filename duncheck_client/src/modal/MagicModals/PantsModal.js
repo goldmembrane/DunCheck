@@ -29,7 +29,7 @@ const PantsModal = (props) => {
                 <div className = 'pantsInputBox'>
                     <div className = 'pantsInput'>
                         <span>하의 : </span>
-                        <input type = 'number' onChange = {onHandlerPants} />
+                        <input type = 'number' onChange = {onHandlerPants} value = {pants}/>
                         <button className = 'settingPants' onClick = {() => {onSubmitPants(); close();}}>닫기</button>
                     </div>
                 </div>

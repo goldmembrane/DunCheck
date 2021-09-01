@@ -29,7 +29,7 @@ const BuffScoreModal = (props) => {
                 <div className = 'buffInputBox'>
                     <div className = 'buffInput'>
                         <span>버프력 컷 : </span>
-                        <input type = 'number' onChange = {onHandlerBuffScore} />
+                        <input type = 'number' onChange = {onHandlerBuffScore} value = {buffScore}/>
                         <button className = 'settingBuff' onClick = {() => {onSubmitBuffScore(); close();}}>닫기</button>
                     </div>
                 </div>

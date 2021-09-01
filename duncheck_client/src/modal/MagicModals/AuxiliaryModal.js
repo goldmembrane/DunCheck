@@ -29,7 +29,7 @@ const AuxiliaryModal = (props) => {
                 <div className = 'auxiliaryInputBox'>
                     <div className = 'auxiliaryInput'>
                         <span>보조장비 : </span>
-                        <input type = 'number' onChange = {onHandlerAuxiliary} />
+                        <input type = 'number' onChange = {onHandlerAuxiliary} value = {auxiliary}/>
                         <button className = 'settingAuxiliary' onClick = {() => {onSubmitAuxiliary(); close();}}>닫기</button>
                     </div>
                 </div>
