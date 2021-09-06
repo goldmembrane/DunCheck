@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { applyMiddleware, createStore } from 'redux'
 import reduxThunk from 'redux-thunk'
 import reducers from './reducer'
+import { BrowserRouter } from 'react-router-dom'
 
 const createStoreWidthMiddleware = applyMiddleware(
     reduxThunk
@@ -12,11 +13,13 @@ const createStoreWidthMiddleware = applyMiddleware(
 
 ReactDOM.render(
     <React.StrictMode>
-        <Provider
-        store = {createStoreWidthMiddleware(
-            reducers,
-            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-        )}>
-            <App />
-        </Provider>
+        <BrowserRouter>
+            <Provider
+            store = {createStoreWidthMiddleware(
+                reducers,
+                window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+            )}>
+                <App />
+            </Provider>
+        </BrowserRouter>
     </React.StrictMode>, document.getElementById('root'))
