@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 
 import ArmletModal from '../../modal/MagicModals/ArmletModal'
 import AuxiliaryModal from '../../modal/MagicModals/AuxiliaryModal'
@@ -13,6 +14,62 @@ import ShoesModal from '../../modal/MagicModals/ShoesModal'
 import ShoulderModal from '../../modal/MagicModals/ShoulderModal'
 import StyleModal from '../../modal/MagicModals/StyleModal'
 import WeaponModal from '../../modal/MagicModals/WeaponModal'
+
+let MagicCutBox = styled.div`
+                    height: 800px;
+                    background-color: #f9d423;`
+
+let MagicCutTitle = styled.div`
+                    width: 300px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    margin: 0px auto;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #00f;`
+
+let MagicCutList = styled.div`
+                    width: 900px;
+                    height: 690px;
+                    margin: 20px auto;
+                    background-color: #24d292;`
+
+let MagicCut = styled.div`
+                    width: 800px;
+                    height: 45px;
+                    margin: 0 auto;
+                    background-color: #f3e7e9;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;`
+
+let MagicCutLabel = styled.div`
+                    width: 100px;
+                    text-align: center;
+                    font-size: 18px;`
+
+let MagicCutModalButton = styled.button`
+                    width: 100%;
+                    height: 45px;
+                    border: none;
+                    background-color: #616161;
+                    font-size: 26px;
+                    cursor: pointer;`
+
+let NextAvatarButtonBox = styled.div`
+                    width: 100px;
+                    height: 30px;
+                    margin: 0 auto;
+                    margin-bottom: 20px;`
+
+let NextAvatarButton = styled.button`
+                    width: 100px;
+                    height: 25px;
+                    border: none;
+                    background-color: #fff;
+                    cursor: pointer;`
+
 
 const Magic = (props) => {
 
@@ -145,64 +202,78 @@ const Magic = (props) => {
     }
     return (
         <>
-            <div className = 'magic-cut-box'>
-                <div className = 'magic-cut-title'>장비 마부 컷 설정</div>
-                    <div className = 'magic-cut-container'>
-                        <div className = 'style-cut'>
-                            <button onClick = {openStyleModal}>칭호 : {style}</button>
+            <MagicCutBox>
+                <MagicCutTitle>장비 마부 컷 설정</MagicCutTitle>
+                    <MagicCutList>
+                        <MagicCut>
+                            <MagicCutLabel>칭호 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openStyleModal}>{style}</MagicCutModalButton>
                             <StyleModal open = {openStyle} close = {closeStyleModal}/>
-                        </div>
-                        <div className = 'weapon-magic'>
-                            <button onClick = {openWeaponModal}>무기 : {weapon}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>무기 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openWeaponModal}>{weapon}</MagicCutModalButton>
                             <WeaponModal open = {openWeapon} close = {closeWeaponModal}/>
-                        </div>
-                        <div className = 'shirt-magic'>
-                            <button onClick = {openShirtModal}>상의 : {shirt}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>상의 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openShirtModal}>{shirt}</MagicCutModalButton>
                             <ShirtModal open = {openShirt} close = {closeShirtModal}/>
-                        </div>
-                        <div className = 'pants-magic'>
-                           <button onClick = {openPantsModal}>하의 : {pants}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>하의 :</MagicCutLabel>
+                           <MagicCutModalButton onClick = {openPantsModal}>{pants}</MagicCutModalButton>
                            <PantsModal open = {openPants} close = {closePantsModal}/>
-                        </div>
-                        <div className = 'shoulder-magic'>
-                            <button onClick = {openShoulderModal}>어깨 : {shoulder}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>어깨 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openShoulderModal}>{shoulder}</MagicCutModalButton>
                             <ShoulderModal open = {openShoulder} close = {closeShoulderModal}/>
-                        </div>
-                        <div className = 'shoes-magic'>
-                            <button onClick = {openShoesModal}>신발 : {shoes}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>신발 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openShoesModal}>{shoes}</MagicCutModalButton>
                             <ShoesModal open = {openShoes} close = {closeShoesModal}/>
-                        </div>
-                        <div className = 'armlet-magic'>
-                            <button onClick = {openArmletModal}>팔찌 : {armlet}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>팔찌 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openArmletModal}>{armlet}</MagicCutModalButton>
                             <ArmletModal open = {openArmlet} close = {closeArmletModal} />
-                        </div>
-                        <div className = 'necklace-magic'>
-                            <button onClick = {openNecklaceModal}>목걸이 : {necklace}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>목걸이 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openNecklaceModal}>{necklace}</MagicCutModalButton>
                             <NecklaceModal open = {openNecklace} close = {closeNecklaceModal}/>
-                        </div>
-                        <div className = 'ring-magic'>
-                            <button onClick = {openRingModal}>반지 : {ring}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>반지 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openRingModal}>{ring}</MagicCutModalButton>
                             <RingModal open = {openRing} close = {closeRingModal}/>
-                        </div>
-                        <div className = 'auxiliary-magic'>
-                            <button onClick = {openAuxiliaryModal}>보조장비 : {auxiliary}</button>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>보조장비 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openAuxiliaryModal}>{auxiliary}</MagicCutModalButton>
                             <AuxiliaryModal open = {openAuxiliary} close = {closeAuxiliaryModal}/>
-                        </div>
-                        <div className = 'magicstone-magic'>
-                           <button onClick = {openMagicstoneModal}>마법석 : {magicstone}</button>
-                           <MagicstoneModal open = {openMagicstone} close = {closeMagicstoneModal}/>
-                        </div>
-                        <div className = 'earling-magic'>
-                           <button onClick = {openEarlingModal}>귀걸이 : {earling}</button>
-                           <EarlingModal open = {openEarling} close = {closeEarlingModal}/>
-                        </div>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>마법석 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openMagicstoneModal}>{magicstone}</MagicCutModalButton>
+                            <MagicstoneModal open = {openMagicstone} close = {closeMagicstoneModal}/>
+                        </MagicCut>
+                        <MagicCut>
+                            <MagicCutLabel>귀걸이 :</MagicCutLabel>
+                            <MagicCutModalButton onClick = {openEarlingModal}>{earling}</MagicCutModalButton>
+                            <EarlingModal open = {openEarling} close = {closeEarlingModal}/>
+                        </MagicCut>
                         <div className = 'full-critical-check-box'>
                             <span>만크 여부 : </span>
                             <input type = 'checkbox' className = 'full-critical-check' onChange = {onCheckFullCriticalHandler}/>
                         </div>
-                    </div>
-                    <button type = 'submit' onClick = {() => props.history.push('/setting/equipment/avatar')}>다음</button>
-            </div>
+                    </MagicCutList>
+                    <NextAvatarButtonBox>
+                        <NextAvatarButton type = 'submit' onClick = {() => props.history.push('/setting/equipment/avatar')}>다음</NextAvatarButton>
+                    </NextAvatarButtonBox>
+            </MagicCutBox>
         </>
     )
 }
