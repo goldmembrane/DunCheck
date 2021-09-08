@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingArmletCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicModal/ArmletModal.css'
+import '../../css/MagicModal/ArmletModal.css'
 
 const ArmletModal = (props) => {
 

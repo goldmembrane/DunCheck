@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-import RestCutModal from '../../modal/EquipmentModals/RestCutModal'
+import RestCutModal from '../../modal/RestCutModal'
 
 let SettingRestContainer = styled.div`
                             height: 600px;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingNecklaceCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicModal/NecklaceModal.css'
+import '../../css/MagicModal/NecklaceModal.css'
 
 const NecklaceModal = (props) => {
 

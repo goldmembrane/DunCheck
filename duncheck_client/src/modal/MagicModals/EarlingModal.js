@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingEarlingCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicModal/EarlingModal.css'
+import '../../css/MagicModal/EarlingModal.css'
 
 const EarlingModal = (props) => {
 

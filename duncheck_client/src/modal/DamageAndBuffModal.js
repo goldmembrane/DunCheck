@@ -4,7 +4,7 @@ import { settingPureDamageCut } from '../action/PureDamageAction'
 import { settingSynergyDamageCut } from '../action/SynergyDamageAction'
 import { settingBuffScoreCut } from '../action/BuffAction'
 
-import '../css/Modal/DamageAndBuffModal.css'
+import '../css/DamageAndBuffModal.css'
 
 const DamageModal = (props) => {
 

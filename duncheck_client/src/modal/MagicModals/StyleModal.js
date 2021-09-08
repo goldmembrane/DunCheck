@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingStyleCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicModal/StyleModal.css' 
+import '../../css/MagicModal/StyleModal.css' 
 
 const StyleModal = (props) => {
 
