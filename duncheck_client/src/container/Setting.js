@@ -32,7 +32,7 @@ let FinishButtonBox = styled.div`
                 margin: 0 auto;`
 
 let FinishSettingButton = styled.button`
-                width: 120px;
+                width: 100%;
                 height: 40px;
                 margin: 0 auto;
                 margin-top: 30px;

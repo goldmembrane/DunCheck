@@ -12,7 +12,7 @@ const AvatarModal = (props) => {
     const { open, close } = props
 
     const [avatar, setAvatar] = useState(false)
-    const [creature, setCreature] = useState(false)
+    const [creature, setCreature] = useState(0)
     const [talisman, setTalisman] = useState(false)
 
     const onHandlerAvatar = (e) => {
