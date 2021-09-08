@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { settingPantsCut } from '../../action/MagicAction'
-import '../../css/Modal/MagicModal/PantsModal.css'
+import '../../css/MagicModal/PantsModal.css'
 
 const PantsModal = (props) => {
 

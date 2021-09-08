@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { settingAvatarCut } from '../../action/AvatarAction'
-import { settingCreatureCut } from '../../action/CreatureAction'
-import { settingTalismanCut } from '../../action/TalismanAction'
-import '../../css/Modal/EquipmentModal/RestCutModal.css'
+import { settingAvatarCut } from '../action/AvatarAction'
+import { settingCreatureCut } from '../action/CreatureAction'
+import { settingTalismanCut } from '../action/TalismanAction'
+
+import '../css/RestCutModal.css'
 
 const AvatarModal = (props) => {
 
