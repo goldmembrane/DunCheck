@@ -2,8 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Equipment from './setting/Equipment'
-import Damage from './setting/Damage'
-import BuffScore from './setting/BuffScore'
+import DamageAndBuff from './setting/DamageAndBuff'
 
 let SettingCut = styled.div`
                 height: 100px;
@@ -60,8 +59,7 @@ const Setting = (props) => {
                 </SettingCut>
                 <Switch>
                     <Route path = '/setting/equipment' component = {Equipment}/>
-                    <Route path = '/setting/damage' component = {Damage} />
-                    <Route path = '/setting/buffscore' component = {BuffScore} />
+                    <Route path = '/setting/damage' component = {DamageAndBuff} />
                 </Switch>
                 <FinishContainer>
                     <FinishButtonBox>
