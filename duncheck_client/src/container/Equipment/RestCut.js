@@ -32,31 +32,32 @@ let ShowRestCutContainer = styled.div`
                             background-color: #B7F8DB;`
 
 let ShowCutBox = styled.div`
-                            width: 300px;
-                            height: 100px;
+                            width: 500px;
+                            height: 130px;
                             margin: 0 auto;
                             background-color: #884D80;
                             padding-top: 10px;
-                            margin-bottom: 20px;`
+                            margin-bottom: 20px;
+                            display: flex;
+                            align-items: center;`
 
 let CutTitle = styled.div`
                             width: 100px;
                             height: 30px;
                             font-size: 20px;
-                            margin: 15px auto;
+                            margin: 0 auto;
                             text-align: center;`
 
 let CutLabel = styled.div`  
                             font-size: 17px;
                             font-weight: bold;
-                            display: inline-block;`
+                            width: 200px;
+                            margin: 0 auto;`
 
 let CutValue = styled.div`
                             width: 30px;
                             font-size: 17px;
-                            font-weight: bold;
-                            display: inline-block;
-                            margin-left: 30px;`
+                            font-weight: bold;`
 
 const RestCut = () => {
 

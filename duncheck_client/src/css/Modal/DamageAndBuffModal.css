@@ -1,4 +1,4 @@
-.damageModal {
+.damageAndBuffModal {
   display: none;
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.damageInputBox {
+.damageAndBuffInputBox {
   width: 90%;
   max-width: 450px;
   height: 300px;
@@ -57,7 +57,7 @@
   margin: 75px auto;
 }
 
-.damageModal.openDamageModal {
+.damageAndBuffModal.openDamageAndBuffModal {
   display: flex;
   align-items: center;
 }
