@@ -12,16 +12,20 @@ let SettingCut = styled.div`
 
 let SettingNavigation = styled.ul`
                 display: flex;
-                width: 800px;
+                width: 600px;
+                height: 50px;
                 margin: 0 auto;
                 background-color: #72afd3;`
 
 let SettingMenu = styled.li`
-                width: 250px;
+                width: 270px;
+                height: 50px;
+                line-height: 50px;
                 margin-right: 20px;
                 background-color: #2575fc;
                 text-align: center;
-                list-style: none;`
+                list-style: none;
+                font-size: 32px;`
                 
 let FinishContainer = styled.div`
                 height: 200px;`
@@ -54,7 +58,6 @@ const Setting = (props) => {
                     <SettingNavigation>
                         <Link to = '/setting/equipment' style = {{ textDecoration : 'none' }}><SettingMenu>장비</SettingMenu></Link>
                         <Link to = '/setting/damage' style = {{ textDecoration : 'none'}}><SettingMenu>딜표</SettingMenu></Link>
-                        <Link to = '/setting/buffscore' style = {{ textDecoration : 'none'}}><SettingMenu>버프력</SettingMenu></Link>
                     </SettingNavigation>
                 </SettingCut>
                 <Switch>
