@@ -1,10 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import Avatar from '../Equipment/Avatar'
-import Creature from '../Equipment/Creature'
+import RestCut from '../Equipment/RestCut'
 import Magic from '../Equipment/Magic'
-import Talisman from '../Equipment/Talisman'
 
 let EquipmentBox = styled.div`
                     height: 60px;
@@ -33,16 +31,12 @@ const Equipment = () => {
                 <EquipmentBox>
                     <EquipmentNavigation>
                         <Link to = '/setting/equipment/magic' style = {{ textDecoration : 'none' }}><EquipmentMenu>장비마부</EquipmentMenu></Link>
-                        <Link to = '/setting/equipment/avatar' style = {{ textDecoration : 'none' }}><EquipmentMenu>아바타</EquipmentMenu></Link>
-                        <Link to = '/setting/equipment/creature' style = {{ textDecoration : 'none' }}><EquipmentMenu>크리쳐</EquipmentMenu></Link>
-                        <Link to = '/setting/equipment/talisman' style = {{ textDecoration : 'none' }}><EquipmentMenu>탈리스만</EquipmentMenu></Link>
+                        <Link to = '/setting/equipment/avatar' style = {{ textDecoration : 'none' }}><EquipmentMenu>나머지 설정</EquipmentMenu></Link>
                     </EquipmentNavigation>
                 </EquipmentBox>
                 <Switch>
                     <Route exact path = '/setting/equipment/magic' component = {Magic} />
-                    <Route path = '/setting/equipment/avatar' component = {Avatar} />
-                    <Route path = '/setting/equipment/creature' component = {Creature} />
-                    <Route path = '/setting/equipment/talisman' component = {Talisman} />
+                    <Route path = '/setting/equipment/avatar' component = {RestCut} />
                 </Switch>
             </Router>
         </>
