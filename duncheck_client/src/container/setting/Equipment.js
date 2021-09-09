@@ -39,8 +39,9 @@ const Equipment = () => {
                     </EquipmentNavigation>
                 </EquipmentBox>
                 <Switch>
-                    <Route exact path = '/setting/equipment/magic' component = {Magic} />
+                    <Route exact path = '/setting/equipment/magic' component = {Magic} /> 
                     <Route path = '/setting/equipment/avatar' component = {RestCut} />
+                    <Route component = { Magic } />
                 </Switch>
             </Router>
         </>
