@@ -78,15 +78,15 @@ const DamageAndBuff = () => {
                 <ShowDamageAndBuffCutContainer>
                     <ShowScoreCutBox>
                         <ScoreCutLabel>퓨딜 컷 : </ScoreCutLabel>
-                        <ScoreCutValue>{pureDamage}억</ScoreCutValue>
+                        <ScoreCutValue>{localStorage.getItem('pureDamage') !== false ? localStorage.getItem('pureDamage') : pureDamage}억</ScoreCutValue>
                     </ShowScoreCutBox>
                     <ShowScoreCutBox>
                         <ScoreCutLabel>시너지 컷 : </ScoreCutLabel>
-                        <ScoreCutValue>{synergyDamage}억</ScoreCutValue>
+                        <ScoreCutValue>{localStorage.getItem('synergyDamage') !== false ? localStorage.getItem('synergyDamage') : synergyDamage}억</ScoreCutValue>
                     </ShowScoreCutBox>
                     <ShowScoreCutBox>
                         <ScoreCutLabel>버프력 컷 : </ScoreCutLabel>
-                        <ScoreCutValue>{buffScore}만</ScoreCutValue>
+                        <ScoreCutValue>{localStorage.getItem('buffScore') !== false ? localStorage.getItem('buffScore') : buffScore}만</ScoreCutValue>
                     </ShowScoreCutBox>
                 </ShowDamageAndBuffCutContainer>
             </DamageAndBuffContainer>

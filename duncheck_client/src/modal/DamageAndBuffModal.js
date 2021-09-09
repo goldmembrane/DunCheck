@@ -85,6 +85,10 @@ const DamageModal = (props) => {
         dispatch(settingPureDamageCut(pureDamageCut))
         dispatch(settingSynergyDamageCut(synergyDamageCut))
         dispatch(settingBuffScoreCut(buffScoreCut))
+
+        localStorage.setItem('pureDamage', pureDamage)
+        localStorage.setItem('synergyDamage', synergyDamage)
+        localStorage.setItem('buffScore', buffScore)
     }
 
 
