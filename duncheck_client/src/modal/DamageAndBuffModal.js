@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { settingPureDamageCut } from '../action/PureDamageAction'
-import { settingSynergyDamageCut } from '../action/SynergyDamageAction'
+import { settingPureDamageCut, settingSynergyDamageCut } from '../action/DamageAction'
 import { settingBuffScoreCut } from '../action/BuffAction'
 
 import '../css/DamageAndBuffModal.css'
