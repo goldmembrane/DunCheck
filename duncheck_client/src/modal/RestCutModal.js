@@ -1,10 +1,60 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import styled from 'styled-components'
+
 import { settingAvatarCut } from '../action/AvatarAction'
 import { settingCreatureCut } from '../action/CreatureAction'
 import { settingTalismanCut } from '../action/TalismanAction'
 
 import '../css/RestCutModal.css'
+
+let RestCutCheckBox = styled.div`
+                        width: 90%;
+                        max-width: 450px;
+                        height: 450px;
+                        margin: 0 auto;
+                        border-radius: 3px;
+                        background-color: #fff;
+                        overflow: hidden;`
+
+let RestCutCheck = styled.div`
+                        width: 80%;
+                        max-width: 300px;
+                        height: 200px;
+                        margin: 125px auto;`
+
+let CutCheck = styled.div`
+                        height: 50px;
+                        display: flex;
+                        align-items: center;`
+
+let CutCheckLable = styled.p`
+                        font-size: 16px;
+                        font-weight: bold;`
+
+let CheckBoxCutValue = styled.input`
+                        width: 30px;
+                        height: 30px;
+                        margin-left: 50px;`
+
+let NumberInputCutValue = styled.input`
+                        width: 120px;
+                        height: 30px;
+                        margin-left: 10px;
+                        text-align: center;`
+
+let SettingRestCut = styled.button`
+                        display: block;
+                        width: 50px;
+                        height: 25px;
+                        line-height: 25px;
+                        border: none;
+                        background-color: #00f;
+                        color: #fff;
+                        font-size: 20px;
+                        border-radius: 3px;
+                        margin: 100px auto;`
+
 
 const AvatarModal = (props) => {
 
@@ -48,24 +98,24 @@ const AvatarModal = (props) => {
     return (
         <div className = {open ? 'openRestCutModal restCutModal' : 'restCutModal'}>
             {open ? (
-            <div className = 'restCutCheckBox'>
-                <div className = 'restCutCheck'>
-                    <div>
-                        <span>딜 플티 체크 여부 : </span>
-                        <input type = 'checkbox' onChange = {onHandlerAvatar} checked = {avatar}/>
-                    </div>
-                    <div>
-                        <span>선택된 크리쳐 수치 : </span>
-                        <input type = 'number' onChange = {onHandlerCreature} value = {creature}/>
+            <RestCutCheckBox>
+                <RestCutCheck>
+                    <CutCheck>
+                        <CutCheckLable>딜 플티 체크 여부 : </CutCheckLable>
+                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerAvatar} checked = {avatar}/>
+                    </CutCheck>
+                    <CutCheck>
+                        <CutCheckLable>선택된 크리쳐 수치 : </CutCheckLable>
+                        <NumberInputCutValue type = 'number' onChange = {onHandlerCreature} value = {creature}/>
                         <span>%</span>
-                    </div>
-                    <div>
-                        <span>올 카펠라 체크 여부 : </span>
-                        <input type = 'checkbox' onChange = {onHandlerTalisman} checked = {talisman} />
-                    </div>
-                    <button className = 'settingAvatar' onClick = {() => {onSubmitRestCut(); close();}}>닫기</button>
-                </div>
-            </div>
+                    </CutCheck>
+                    <CutCheck>
+                        <CutCheckLable>올 카펠라 체크 여부 : </CutCheckLable>
+                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerTalisman} checked = {talisman} />
+                    </CutCheck>
+                    <SettingRestCut onClick = {() => {onSubmitRestCut(); close();}}>닫기</SettingRestCut>
+                </RestCutCheck>
+            </RestCutCheckBox>
             ): null}
         </div>
     )
