@@ -61,6 +61,7 @@ const ShoesModal = (props) => {
         }
 
         dispatch(settingShoesCut(shoesCut))
+        localStorage.setItem('shoes', shoes)
     }
 
     return (

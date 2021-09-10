@@ -61,6 +61,7 @@ const NecklaceModal = (props) => {
         }
 
         dispatch(settingNecklaceCut(necklaceCut))
+        localStorage.setItem('necklace', necklace)
     }
 
     return (

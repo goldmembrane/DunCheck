@@ -61,6 +61,7 @@ const ArmletModal = (props) => {
         }
 
         dispatch(settingArmletCut(armletCut))
+        localStorage.setItem('armlet', armlet)
     }
     return(
         <div className = { open ? 'openArmletModal armletModal' : 'armletModal'}>
