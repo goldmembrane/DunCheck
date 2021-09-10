@@ -61,6 +61,7 @@ const MagicstoneModal = (props) => {
         }
 
         dispatch(settingMagicstoneCut(magicstoneCut))
+        localStorage.setItem('magicstone', magicstone)
     }
 
     return (

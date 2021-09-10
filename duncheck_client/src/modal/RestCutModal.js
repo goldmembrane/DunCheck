@@ -68,6 +68,7 @@ const AvatarModal = (props) => {
 
     const onHandlerAvatar = (e) => {
         setAvatar(e.target.checked)
+        localStorage.setItem('avatar', e.target.checked)
     }
 
     const onHandlerCreature = (e) => {
@@ -76,6 +77,7 @@ const AvatarModal = (props) => {
 
     const onHandlerTalisman = (e) => {
         setTalisman(e.target.checked)
+        localStorage.setItem('talisman', e.target.checked)
     }
 
     const onSubmitRestCut = () => {
@@ -94,6 +96,8 @@ const AvatarModal = (props) => {
         dispatch(settingAvatarCut(avatarCut))
         dispatch(settingCreatureCut(creatureCut))
         dispatch(settingTalismanCut(talismanCut))
+
+        localStorage.setItem('creature', creature)
     }
     return (
         <div className = {open ? 'openRestCutModal restCutModal' : 'restCutModal'}>
@@ -102,7 +106,7 @@ const AvatarModal = (props) => {
                 <RestCutCheck>
                     <CutCheck>
                         <CutCheckLable>딜 플티 체크 여부 : </CutCheckLable>
-                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerAvatar} checked = {avatar}/>
+                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerAvatar} defaultChecked = {JSON.parse(localStorage.getItem('avatar'))}/>
                     </CutCheck>
                     <CutCheck>
                         <CutCheckLable>선택된 크리쳐 수치 : </CutCheckLable>
@@ -111,7 +115,7 @@ const AvatarModal = (props) => {
                     </CutCheck>
                     <CutCheck>
                         <CutCheckLable>올 카펠라 체크 여부 : </CutCheckLable>
-                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerTalisman} checked = {talisman} />
+                        <CheckBoxCutValue type = 'checkbox' onChange = {onHandlerTalisman} defaultChecked = {JSON.parse(localStorage.getItem('talisman'))} />
                     </CutCheck>
                     <SettingRestCut onClick = {() => {onSubmitRestCut(); close();}}>닫기</SettingRestCut>
                 </RestCutCheck>

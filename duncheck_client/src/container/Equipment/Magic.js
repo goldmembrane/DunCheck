@@ -207,62 +207,62 @@ const Magic = (props) => {
                     <MagicCutList>
                         <MagicCut>
                             <MagicCutLabel>칭호 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openStyleModal}>{style}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openStyleModal}>{localStorage.getItem('style') !== false ? localStorage.getItem('style') : style}</MagicCutModalButton>
                             <StyleModal open = {openStyle} close = {closeStyleModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>무기 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openWeaponModal}>{weapon}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openWeaponModal}>{localStorage.getItem('weapon') !== false ? localStorage.getItem('weapon') : weapon}</MagicCutModalButton>
                             <WeaponModal open = {openWeapon} close = {closeWeaponModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>상의 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openShirtModal}>{shirt}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openShirtModal}>{localStorage.getItem('shirt') !== false ? localStorage.getItem('shirt') : shirt}</MagicCutModalButton>
                             <ShirtModal open = {openShirt} close = {closeShirtModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>하의 :</MagicCutLabel>
-                           <MagicCutModalButton onClick = {openPantsModal}>{pants}</MagicCutModalButton>
+                           <MagicCutModalButton onClick = {openPantsModal}>{localStorage.getItem('pants') !== false ? localStorage.getItem('pants') : pants}</MagicCutModalButton>
                            <PantsModal open = {openPants} close = {closePantsModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>어깨 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openShoulderModal}>{shoulder}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openShoulderModal}>{localStorage.getItem('shoulder') !== false ? localStorage.getItem('shoulder') : shoulder}</MagicCutModalButton>
                             <ShoulderModal open = {openShoulder} close = {closeShoulderModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>신발 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openShoesModal}>{shoes}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openShoesModal}>{localStorage.getItem('shoes') !== false ? localStorage.getItem('shoes') : shoes}</MagicCutModalButton>
                             <ShoesModal open = {openShoes} close = {closeShoesModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>팔찌 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openArmletModal}>{armlet}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openArmletModal}>{localStorage.getItem('armlet') !== false ? localStorage.getItem('armlet') : armlet}</MagicCutModalButton>
                             <ArmletModal open = {openArmlet} close = {closeArmletModal} />
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>목걸이 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openNecklaceModal}>{necklace}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openNecklaceModal}>{localStorage.getItem('necklace') !== false ? localStorage.getItem('necklace') : necklace}</MagicCutModalButton>
                             <NecklaceModal open = {openNecklace} close = {closeNecklaceModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>반지 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openRingModal}>{ring}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openRingModal}>{localStorage.getItem('ring') !== false ? localStorage.getItem('ring') : ring}</MagicCutModalButton>
                             <RingModal open = {openRing} close = {closeRingModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>보조장비 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openAuxiliaryModal}>{auxiliary}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openAuxiliaryModal}>{localStorage.getItem('auxiliary') !== false ? localStorage.getItem('auxiliary') : auxiliary}</MagicCutModalButton>
                             <AuxiliaryModal open = {openAuxiliary} close = {closeAuxiliaryModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>마법석 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openMagicstoneModal}>{magicstone}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openMagicstoneModal}>{localStorage.getItem('magicstone') !== false ? localStorage.getItem('magicstone') : magicstone}</MagicCutModalButton>
                             <MagicstoneModal open = {openMagicstone} close = {closeMagicstoneModal}/>
                         </MagicCut>
                         <MagicCut>
                             <MagicCutLabel>귀걸이 :</MagicCutLabel>
-                            <MagicCutModalButton onClick = {openEarlingModal}>{earling}</MagicCutModalButton>
+                            <MagicCutModalButton onClick = {openEarlingModal}>{localStorage.getItem('earling') !== false ? localStorage.getItem('ealing') : earling}</MagicCutModalButton>
                             <EarlingModal open = {openEarling} close = {closeEarlingModal}/>
                         </MagicCut>
                         <div className = 'full-critical-check-box'>

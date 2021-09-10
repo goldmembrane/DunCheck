@@ -61,6 +61,7 @@ const ShoulderModal = (props) => {
         }
 
         dispatch(settingShoulderCut(shoulderCut))
+        localStorage.setItem('shoulder', shoulder)
     }
 
     return (

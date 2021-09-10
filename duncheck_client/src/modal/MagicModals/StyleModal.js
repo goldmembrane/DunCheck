@@ -61,6 +61,7 @@ const StyleModal = (props) => {
         }
 
         dispatch(settingStyleCut(styleCut))
+        localStorage.setItem('style', style)
     }
 
     return (

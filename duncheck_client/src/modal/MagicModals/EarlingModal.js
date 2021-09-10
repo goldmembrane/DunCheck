@@ -61,6 +61,7 @@ const EarlingModal = (props) => {
         }
 
         dispatch(settingEarlingCut(earlingCut))
+        localStorage.setItem('earling', earling)
     }
 
 
