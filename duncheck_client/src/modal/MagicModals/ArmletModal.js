@@ -1,82 +1,118 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { settingArmletCut } from '../../action/MagicAction'
-import styled from 'styled-components'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { settingArmletCut } from "../../action/MagicAction";
+import styled from "styled-components";
 
-import '../../css/MagicModal/ArmletModal.css'
+let ModalBox = styled.div`
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+`;
+
+let OpenModalBox = styled.div`
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+`;
 
 let MagicCutBox = styled.div`
-                    width: 90%;
-                    max-width: 450px;
-                    height: 400px;
-                    margin: 0 auto;
-                    border-radius: 3px;
-                    background-color: #fff;
-                    overflow: hidden;`
+  width: 90%;
+  max-width: 450px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: hidden;
+`;
 
 let MagicInput = styled.div`
-                    width: 80%;
-                    max-width: 250px;
-                    height: 100px;
-                    margin: 125px auto;`
+  width: 80%;
+  max-width: 250px;
+  height: 100px;
+  margin: 125px auto;
+`;
 
 let MagicCutLabel = styled.p`
-                    font-size: 18px;
-                    font-weight: bold;
-                    display: inline-block;`
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+`;
 
 let MagicCutValue = styled.input`
-                    width: 180px;
-                    height: 30px;
-                    text-align: center;
-                    margin-left: 20px;`
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  margin-left: 20px;
+`;
 
 let SettingMagicButton = styled.button`
-                    display: block;
-                    width: 50px;
-                    height: 25px;
-                    line-height: 25px;
-                    border: none;
-                    background-color: #00f;
-                    color: #fff;
-                    font-size: 20px;
-                    border-radius: 3px;
-                    margin: 100px auto;`
+  display: block;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  border: none;
+  background-color: #00f;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 3px;
+  margin: 100px auto;
+`;
 
 const ArmletModal = (props) => {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch()
+  const { open, close } = props;
 
-    const { open, close } = props
+  const [armlet, setArmlet] = useState(0);
 
-    const [armlet, setArmlet] = useState(0)
+  const onHandlerArmlet = (e) => {
+    setArmlet(e.target.value);
+  };
 
-    const onHandlerArmlet = (e) => {
-       setArmlet(e.target.value)
-    }
+  const onSubmitArmlet = () => {
+    let armletCut = {
+      armlet: armlet,
+    };
 
-    const onSubmitArmlet = () => {
-        let armletCut = {
-            armlet: armlet
-        }
+    dispatch(settingArmletCut(armletCut));
+    localStorage.setItem("armlet", armlet);
+  };
+  return open ? (
+    <OpenModalBox>
+      <MagicCutBox>
+        <MagicInput>
+          <MagicCutLabel>팔찌 : </MagicCutLabel>
+          <MagicCutValue
+            type="number"
+            onChange={onHandlerArmlet}
+            value={armlet}
+          />
+          <SettingMagicButton
+            className="settingArmlet"
+            onClick={() => {
+              onSubmitArmlet();
+              close();
+            }}
+          >
+            닫기
+          </SettingMagicButton>
+        </MagicInput>
+      </MagicCutBox>
+    </OpenModalBox>
+  ) : (
+    <ModalBox></ModalBox>
+  );
+};
 
-        dispatch(settingArmletCut(armletCut))
-        localStorage.setItem('armlet', armlet)
-    }
-    return(
-        <div className = { open ? 'openArmletModal armletModal' : 'armletModal'}>
-            {open ? (
-                <MagicCutBox>
-                    <MagicInput>
-                        <MagicCutLabel>팔찌 : </MagicCutLabel>
-                        <MagicCutValue type = 'number' onChange = {onHandlerArmlet} value = {armlet}/>
-                        <SettingMagicButton className = 'settingArmlet' onClick = {() => {onSubmitArmlet(); close();}}>닫기</SettingMagicButton>
-                    </MagicInput>
-                </MagicCutBox>
-            ): null}
-        </div>
-    )
-}
-
-
-export default ArmletModal
+export default ArmletModal;
