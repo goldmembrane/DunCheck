@@ -1,118 +1,139 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 let MainHeader = styled.div`
-                height: 100px;
-                background-color: #fbc2eb;
-                display: flex;
-                align-items: center;`
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fbc2eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 let LogoBox = styled.div`
-                width: 40px;
-                margin-left: 20px;
-                line-height: 40px;
-                text-align: center;`
+  padding: 10px 20px 10px 20px;
+  margin-left: 20px;
+  text-align: center;
+  cursor: pointer;
+`;
 
 let TitleBox = styled.div`
-                width: 80px;
-                margin: 0 auto;
-                font-size: 28px;
-                font-weight: bold;
-                `
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  font-size: 28px;
+  font-weight: bold;
+`;
+
+let EmptyBox = styled.div`
+  width: 100px;
+`;
 
 let MenuNavigation = styled.div`
-                height: 50px;
-                background-color: #8fd3f4;
-                display: flex;
-                align-items: center;
-                position: relative;`
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #8fd3f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 let Login = styled.div`
-                width: 60px;
-                position: absolute;
-                right: 0;`
+  padding: 5px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+`;
 
 let SettingButton = styled.button`
-                width: 700px;
-                margin: 0 auto;
-                font-size: 22px;
-                font-weight: bold;
-                background-color: #fff;
-                border: none;
-                cursor: pointer;`
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+`;
 
 let SearchBarContainer = styled.div`
-                height: 500px;
-                background-color: #330867;`
+  padding-top: 30px;
+  padding-bottom: 400px;
+  background-color: #330867;
+`;
 
 let SearchBarBox = styled.div`
-                width: 500px;
-                margin: 0 auto;
-                background-color: #c3cfe2;`
+  display: flex;
+  justify-content: center;
+`;
 
 let SearchBar = styled.input`
-                width: 400px;
-                height: 40px;
-                font-size: 28px;`
+  padding-left: 90px;
+  padding-right: 90px;
+  font-size: 30px;
+`;
 
 let SearchButton = styled.button`
-                width: 92px;
-                height: 48px;
-                font-size: 28px;
-                font-weight: bold;
-                background-color: #89f7fe;
-                border: none;
-                cursor: pointer;`
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #89f7fe;
+  border: none;
+  cursor: pointer;
+`;
 
 let FooterBox = styled.div`
-                height: 400px;
-                background-color: #96fbc4;`
+  padding-bottom: 100px;
+  background-color: #96fbc4;
+`;
 
 let Api = styled.div`
-                height: 100px;
-                background-color: #fa71cd;
-                line-height: 100px;
-                padding-left: 20px;`
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background-color: #fa71cd;
+  display: flex;
+  padding-left: 20px;
+`;
 
 let NoticeBoard = styled.div`
-                height: 300px;
-                background-color: #48c6ef;
-                text-align: center;`
-
+  padding-bottom: 300px;
+  background-color: #48c6ef;
+  text-align: center;
+`;
 
 const Main = (props) => {
-    return (
-        <>
-            <MainHeader>
-                <LogoBox>
-                    <h2>logo</h2>
-                </LogoBox>
-                <TitleBox>
-                    DunCheck
-                </TitleBox>
-            </MainHeader>
-            <MenuNavigation>
-                <SettingButton onClick = {() => {props.history.push('/setting')}}>설정</SettingButton>
-                <Login>
-                    로그인
-                </Login>
-            </MenuNavigation>
-            <SearchBarContainer>
-                <SearchBarBox>
-                    <SearchBar type = 'text' className = 'search-bar' />
-                        <SearchButton>검색</SearchButton>
-                </SearchBarBox>
-            </SearchBarContainer>
-            <FooterBox>
-                <Api>
-                    copyright by Neople
-                </Api>
-                <NoticeBoard>
-                    notice board
-                </NoticeBoard>
-            </FooterBox>
-        </>
-    )
-}
+  return (
+    <>
+      <MainHeader>
+        <LogoBox>
+          <h2>logo</h2>
+        </LogoBox>
+        <TitleBox>DunCheck</TitleBox>
+        <EmptyBox></EmptyBox>
+      </MainHeader>
+      <MenuNavigation>
+        <EmptyBox></EmptyBox>
+        <SettingButton
+          onClick={() => {
+            props.history.push("/setting");
+          }}
+        >
+          설정
+        </SettingButton>
+        <Login>로그인</Login>
+      </MenuNavigation>
+      <SearchBarContainer>
+        <SearchBarBox>
+          <SearchBar type="text" className="search-bar" />
+          <SearchButton>검색</SearchButton>
+        </SearchBarBox>
+      </SearchBarContainer>
+      <FooterBox>
+        <NoticeBoard>notice board</NoticeBoard>
+        <Api>copyright by Neople</Api>
+      </FooterBox>
+    </>
+  );
+};
 
-export default Main
+export default Main;
