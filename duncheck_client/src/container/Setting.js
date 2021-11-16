@@ -1,44 +1,43 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Equipment from './setting/Equipment'
-import DamageAndBuff from './setting/DamageAndBuff'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import styled from "styled-components";
+import Equipment from "./setting/Equipment";
+import DamageAndBuff from "./setting/DamageAndBuff";
 
 let SettingCut = styled.div`
-                height: 100px;
-                background-color: #fff1eb;
-                display: flex;
-                align-items: center;`
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff1eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 let SettingNavigation = styled.ul`
-                display: flex;
-                width: 600px;
-                height: 50px;
-                margin: 0 auto;
-                background-color: #72afd3;`
+  display: flex;
+  justify-content: space-between;
+`;
 
 let SettingMenu = styled.li`
-                width: 270px;
-                height: 50px;
-                line-height: 50px;
-                margin-right: 20px;
-                background-color: #2575fc;
-                text-align: center;
-                list-style: none;
-                font-size: 32px;`
-                
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #2575fc;
+  margin-right: 40px;
+  text-align: center;
+  list-style: none;
+  font-size: 32px;
+`;
+
 let FinishContainer = styled.div`
-                height: 200px;`
-                
-let FinishButtonBox = styled.div`
-                width: 200px;
-                margin: 0 auto;`
+  padding-top: 30px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+`;
 
 let FinishSettingButton = styled.button`
-                width: 100%;
-                height: 40px;
-                margin: 0 auto;
-                margin-top: 30px;
+                padding-left: 50px;
+                padding-right: 50px;
                 font-size: 22px;
                 font-weight: bold
                 text-align: center;
@@ -48,30 +47,34 @@ let FinishSettingButton = styled.button`
                 background-color: #fff;
                 color: #0000ff;
                 cursor: pointer;
-                font-weight: bold;`
+                font-weight: bold;`;
 
 const Setting = (props) => {
-    return( 
-        <>
-            <Router>
-                <SettingCut>
-                    <SettingNavigation>
-                        <Link to = '/setting/equipment' style = {{ textDecoration : 'none' }}><SettingMenu>장비</SettingMenu></Link>
-                        <Link to = '/setting/damage' style = {{ textDecoration : 'none'}}><SettingMenu>딜표</SettingMenu></Link>
-                    </SettingNavigation>
-                </SettingCut>
-                <Switch>
-                    <Route path = '/setting/equipment' component = {Equipment}/>
-                    <Route path = '/setting/damage' component = {DamageAndBuff} />
-                </Switch>
-                <FinishContainer>
-                    <FinishButtonBox>
-                        <FinishSettingButton onClick = {() => props.history.push('/')}>완료</FinishSettingButton>
-                    </FinishButtonBox>
-                </FinishContainer>
-            </Router>
-        </>
-    )
-}
+  return (
+    <>
+      <Router>
+        <SettingCut>
+          <SettingNavigation>
+            <Link to="/setting/equipment" style={{ textDecoration: "none" }}>
+              <SettingMenu>장비</SettingMenu>
+            </Link>
+            <Link to="/setting/damage" style={{ textDecoration: "none" }}>
+              <SettingMenu>딜표</SettingMenu>
+            </Link>
+          </SettingNavigation>
+        </SettingCut>
+        <Switch>
+          <Route path="/setting/equipment" component={Equipment} />
+          <Route path="/setting/damage" component={DamageAndBuff} />
+        </Switch>
+        <FinishContainer>
+          <FinishSettingButton onClick={() => props.history.push("/")}>
+            완료
+          </FinishSettingButton>
+        </FinishContainer>
+      </Router>
+    </>
+  );
+};
 
-export default Setting
+export default Setting;
