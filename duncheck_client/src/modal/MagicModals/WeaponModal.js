@@ -86,7 +86,6 @@ const WeaponModal = (props) => {
     };
 
     dispatch(settingWeaponCut(weaponCut));
-    localStorage.setItem("weapon", weapon);
   };
 
   return open ? (

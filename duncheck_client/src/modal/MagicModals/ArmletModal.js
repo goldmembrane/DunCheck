@@ -86,7 +86,6 @@ const ArmletModal = (props) => {
     };
 
     dispatch(settingArmletCut(armletCut));
-    localStorage.setItem("armlet", armlet);
   };
   return open ? (
     <OpenModalBox>

@@ -86,7 +86,6 @@ const ShirtModal = (props) => {
     };
 
     dispatch(settingShirtCut(shirtCut));
-    localStorage.setItem("shirt", shirt);
   };
 
   return open ? (

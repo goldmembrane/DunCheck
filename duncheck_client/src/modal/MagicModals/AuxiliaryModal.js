@@ -86,7 +86,6 @@ const AuxiliaryModal = (props) => {
     };
 
     dispatch(settingAuxiliaryCut(auxiliaryCut));
-    localStorage.setItem("auxiliary", auxiliary);
   };
 
   return open ? (

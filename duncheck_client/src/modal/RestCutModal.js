@@ -94,7 +94,6 @@ const AvatarModal = (props) => {
 
   const onHandlerAvatar = (e) => {
     setAvatar(e.target.checked);
-    localStorage.setItem("avatar", e.target.checked);
   };
 
   const onHandlerCreature = (e) => {
@@ -103,7 +102,6 @@ const AvatarModal = (props) => {
 
   const onHandlerTalisman = (e) => {
     setTalisman(e.target.checked);
-    localStorage.setItem("talisman", e.target.checked);
   };
 
   const onSubmitRestCut = () => {
@@ -134,7 +132,7 @@ const AvatarModal = (props) => {
             <CheckBoxCutValue
               type="checkbox"
               onChange={onHandlerAvatar}
-              defaultChecked={JSON.parse(localStorage.getItem("avatar"))}
+              defaultChecked={avatar}
             />
           </CutCheck>
           <CutCheck>
@@ -151,7 +149,7 @@ const AvatarModal = (props) => {
             <CheckBoxCutValue
               type="checkbox"
               onChange={onHandlerTalisman}
-              defaultChecked={JSON.parse(localStorage.getItem("talisman"))}
+              defaultChecked={talisman}
             />
           </CutCheck>
           <SettingRestCut

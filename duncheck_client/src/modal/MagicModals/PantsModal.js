@@ -86,7 +86,6 @@ const PantsModal = (props) => {
     };
 
     dispatch(settingPantsCut(pantsCut));
-    localStorage.setItem("pants", pants);
   };
 
   return open ? (

@@ -86,7 +86,6 @@ const RingModal = (props) => {
     };
 
     dispatch(settingRingCut(ringCut));
-    localStorage.setItem("ring", ring);
   };
 
   return open ? (
