@@ -71,7 +71,9 @@ let CutValue = styled.div`
 const RestCut = () => {
   const [openRest, setOpenRest] = useState(false);
 
+  const avatar = useSelector((state) => state.AvatarReducer.avatar);
   const creature = useSelector((state) => state.CreatureReducer.creature);
+  const talisman = useSelector((state) => state.TalismanReducer.talisman);
 
   const openRestModal = () => {
     setOpenRest(true);
@@ -93,9 +95,7 @@ const RestCut = () => {
         <ShowCutBox>
           <CutTitle>아바타 컷</CutTitle>
           <CutLabel>딜 플티 체크 여부 : </CutLabel>
-          <CutValue>
-            {localStorage.getItem("avatar") === "true" ? `O` : `X`}
-          </CutValue>
+          <CutValue>{avatar === true ? "O" : "X"}</CutValue>
         </ShowCutBox>
         <ShowCutBox>
           <CutTitle>크리쳐 컷</CutTitle>
@@ -105,9 +105,7 @@ const RestCut = () => {
         <ShowCutBox>
           <CutTitle>탈리스만 컷</CutTitle>
           <CutLabel>올 카펠라 체크 여부 : </CutLabel>
-          <CutValue>
-            {localStorage.getItem("talisman") === "true" ? `O` : `X`}
-          </CutValue>
+          <CutValue>{talisman === true ? "O" : "X"}</CutValue>
         </ShowCutBox>
       </ShowRestCutContainer>
     </SettingRestContainer>
