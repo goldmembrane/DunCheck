@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 
 import ArmletModal from "../../modal/MagicModals/ArmletModal";
@@ -14,6 +14,7 @@ import ShoesModal from "../../modal/MagicModals/ShoesModal";
 import ShoulderModal from "../../modal/MagicModals/ShoulderModal";
 import StyleModal from "../../modal/MagicModals/StyleModal";
 import WeaponModal from "../../modal/MagicModals/WeaponModal";
+import { settingFullCriticalCut } from "../../action/MagicAction";
 
 let MagicCutBox = styled.div`
   padding-top: 30px;
@@ -94,7 +95,9 @@ const Magic = (props) => {
   const [openAuxiliary, setOpenAuxiliary] = useState(false);
   const [openMagicstone, setOpenMagicstone] = useState(false);
   const [openEarling, setOpenEarling] = useState(false);
-  const [fullCritical, setFullCritical] = useState(false);
+  const [fullCritical, setFullCritical] = useState(true);
+
+  const dispatch = useDispatch();
 
   const style = useSelector((state) => state.MagicReducer.style);
   const weapon = useSelector((state) => state.MagicReducer.weapon);
@@ -208,6 +211,14 @@ const Magic = (props) => {
   const onCheckFullCriticalHandler = () => {
     setFullCritical(!fullCritical);
   };
+
+  const onSubmitCritical = () => {
+    let criticalCut = {
+      critical: fullCritical,
+    };
+
+    dispatch(settingFullCriticalCut(criticalCut));
+  };
   return (
     <>
       <MagicCutBox>
@@ -305,7 +316,10 @@ const Magic = (props) => {
             <input
               type="checkbox"
               className="full-critical-check"
-              onChange={onCheckFullCriticalHandler}
+              onChange={() => {
+                onCheckFullCriticalHandler();
+                onSubmitCritical();
+              }}
             />
           </FullCriticalCheckBox>
         </MagicCutList>
