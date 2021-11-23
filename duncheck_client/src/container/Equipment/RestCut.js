@@ -37,18 +37,15 @@ let ShowRestCutContainer = styled.div`
 `;
 
 let ShowCutBox = styled.div`
-  width: 30%;
+  padding: 50px 10px;
   background-color: #b7f8db;
-  padding-top: 50px;
-  padding-bottom: 50px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 `;
 
 let CutTitle = styled.div`
-  width: 100px;
-  padding-top: 10px;
+  padding: 10px;
   padding-bottom: 10px;
   font-size: 20px;
   margin: 0 auto;

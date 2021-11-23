@@ -5,21 +5,19 @@ import styled from "styled-components";
 import DamageAndBuffModal from "../../modal/DamageAndBuffModal";
 
 let DamageAndBuffContainer = styled.div`
-  height: 300px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   background-color: #a8bfff;
 `;
 
 let DamageAndBuffCutBox = styled.div`
-  width: 700px;
-  height: 60px;
-  background-color: #f578dc;
-  margin: 0 auto;
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
 `;
 
 let DamageAndBuffCutButton = styled.button`
-  width: 100%;
-  height: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: #fff;
   border: none;
   cursor: pointer;
@@ -29,19 +27,17 @@ let DamageAndBuffCutButton = styled.button`
 `;
 
 let ShowDamageAndBuffCutContainer = styled.div`
-  width: 400px;
-  height: 200px;
-  margin: 10px auto;
-  background-color: #d7fffe;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: cetner;
+  align-items: center;
 `;
 
 let ShowScoreCutBox = styled.div`
-  width: 300px;
-  height: 40px;
-  margin: 0 auto;
+  padding: 50px 80px;
   background-color: #50a7c2;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
 `;
