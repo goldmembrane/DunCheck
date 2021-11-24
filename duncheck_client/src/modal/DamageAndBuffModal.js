@@ -59,6 +59,15 @@ let DamageAndBuffCutValue = styled.input`
   height: 30px;
   text-align: center;
   margin-left: 20px;
+  margin-right: 20px;
+`;
+
+let PureDamageCutValue = styled.input`
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  margin-left: 35px;
+  margin-right: 20px;
 `;
 
 let SettingDamageAndBuffCutButton = styled.button`
@@ -118,7 +127,7 @@ const DamageModal = (props) => {
       <DamageAndBuffInputBox>
         <DamageInput>
           <DamageAndBuffCutLabel>퓨딜 컷 : </DamageAndBuffCutLabel>
-          <DamageAndBuffCutValue
+          <PureDamageCutValue
             type="number"
             onChange={onHandlerPureDamage}
             value={pureDamage}

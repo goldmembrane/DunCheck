@@ -83,8 +83,7 @@ let SearchButton = styled.button`
 `;
 
 let FooterBox = styled.div`
-  padding-bottom: 100px;
-  background-color: #96fbc4;
+  padding-bottom: 20px;
 `;
 
 let Api = styled.div`
