@@ -44,6 +44,14 @@ let ShowCutBox = styled.div`
   align-items: center;
 `;
 
+let ShowTalismanCutBox = styled.div`
+  padding: 50px 1px;
+  background-color: #b7f8db;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+`;
+
 let CutTitle = styled.div`
   padding: 10px;
   padding-bottom: 10px;
@@ -99,11 +107,11 @@ const RestCut = () => {
           <CutLabel>선택된 크리쳐 수치 : </CutLabel>
           <CutValue>{creature}%</CutValue>
         </ShowCutBox>
-        <ShowCutBox>
+        <ShowTalismanCutBox>
           <CutTitle>탈리스만 컷</CutTitle>
           <CutLabel>올 카펠라 체크 여부 : </CutLabel>
           <CutValue>{talisman === true ? "O" : "X"}</CutValue>
-        </ShowCutBox>
+        </ShowTalismanCutBox>
       </ShowRestCutContainer>
     </SettingRestContainer>
   );
