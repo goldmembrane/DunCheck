@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 let MainHeader = styled.div`
   padding-top: 10px;
@@ -66,8 +67,8 @@ let SearchBarBox = styled.div`
 `;
 
 let SearchBar = styled.input`
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 10px;
+  padding-right: 150px;
   font-size: 30px;
 `;
 
@@ -101,6 +102,35 @@ let NoticeBoard = styled.div`
 `;
 
 const Main = (props) => {
+  const [userId, setUserId] = useState("");
+
+  const userNameHandler = (e) => {
+    setUserId(e.target.value);
+  };
+
+  const getUserInfo = async (id) => {
+    let userName = encodeURIComponent(id);
+
+    await axios
+      .get(
+        `https://api.neople.co.kr/df/servers/all/characters?characterName=${userName}&apikey=EOpqkGeXU3ig9daADgqV2oLJIuXM9X76`
+      )
+      .then((response) => {
+        let settedId = response.data.rows
+          .flatMap((id) => id.characterId)
+          .join("");
+
+        let serverId = response.data.rows.flatMap((id) => id.serverId).join("");
+
+        axios
+          .get(
+            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}?apikey=EOpqkGeXU3ig9daADgqV2oLJIuXM9X76`
+          )
+          .then((data) => {
+            console.log(data);
+          });
+      });
+  };
   return (
     <>
       <MainHeader>
@@ -123,8 +153,18 @@ const Main = (props) => {
       </MenuNavigation>
       <SearchBarContainer>
         <SearchBarBox>
-          <SearchBar type="text" className="search-bar" />
-          <SearchButton>검색</SearchButton>
+          <SearchBar
+            type="text"
+            className="search-bar"
+            onChange={userNameHandler}
+          />
+          <SearchButton
+            onClick={() => {
+              getUserInfo(userId);
+            }}
+          >
+            검색
+          </SearchButton>
         </SearchBarBox>
       </SearchBarContainer>
       <FooterBox>
