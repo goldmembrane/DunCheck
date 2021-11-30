@@ -125,7 +125,7 @@ const Main = (props) => {
 
         axios
           .get(
-            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}?apikey=${api.key}`
+            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}/equip/equipment?apikey=${api.key}`
           )
           .then((data) => {
             console.log(data);
