@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import * as api from "../module/api";
 
 let MainHeader = styled.div`
   padding-top: 10px;
@@ -113,7 +114,7 @@ const Main = (props) => {
 
     await axios
       .get(
-        `https://api.neople.co.kr/df/servers/all/characters?characterName=${userName}&apikey=EOpqkGeXU3ig9daADgqV2oLJIuXM9X76`
+        `https://api.neople.co.kr/df/servers/all/characters?characterName=${userName}&apikey=${api.key}`
       )
       .then((response) => {
         let settedId = response.data.rows
@@ -124,7 +125,7 @@ const Main = (props) => {
 
         axios
           .get(
-            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}?apikey=EOpqkGeXU3ig9daADgqV2oLJIuXM9X76`
+            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}?apikey=${api.key}`
           )
           .then((data) => {
             console.log(data);
