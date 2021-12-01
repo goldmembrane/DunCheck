@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+
 import * as api from "../module/api";
+import CharacterComponent from "../component/CharacterComponent";
 
 let MainHeader = styled.div`
   padding-top: 10px;
@@ -104,6 +106,7 @@ let NoticeBoard = styled.div`
 
 const Main = (props) => {
   const [userId, setUserId] = useState("");
+  const [userEquipment, setUserEquipment] = useState([]);
 
   const userNameHandler = (e) => {
     setUserId(e.target.value);
@@ -124,12 +127,20 @@ const Main = (props) => {
         let serverId = response.data.rows.flatMap((id) => id.serverId).join("");
 
         axios
-          .get(
-            `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}/equip/equipment?apikey=${api.key}`
-          )
-          .then((data) => {
-            console.log(data);
-          });
+          .all([
+            axios.get(
+              `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}/equip/equipment?apikey=${api.key}`
+            ),
+            axios.get(
+              `https://api.neople.co.kr/df/servers/${serverId}/characters/${settedId}/equip/avatar?apikey=${api.key}`
+            ),
+          ])
+          .then(
+            axios.spread((res1, res2) => {
+              console.log(res1, res2);
+              setUserEquipment(res1);
+            })
+          );
       });
   };
   return (
@@ -167,6 +178,10 @@ const Main = (props) => {
             검색
           </SearchButton>
         </SearchBarBox>
+
+        {userEquipment.length !== 0 ? (
+          <CharacterComponent equip={userEquipment} />
+        ) : null}
       </SearchBarContainer>
       <FooterBox>
         <NoticeBoard>notice board</NoticeBoard>
