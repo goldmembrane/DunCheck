@@ -1,11 +1,10 @@
 import React from 'react'
-import { Button } from './Components/Button'
+import Main from './Pages/Main'
 
 const App = () => {
     return (
         <>
-           <div>Hello!</div>
-           <Button content = "compile" />
+            <Main />
         </>
     )
 }
