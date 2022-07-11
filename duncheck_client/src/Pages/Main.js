@@ -3,6 +3,7 @@ import { Text } from '../Components/Text'
 import { Button } from "../Components/Button"
 import OfficialArea from "./OfficialArea"
 import ItemRatesArea from "./ItemRatesArea"
+import EpicDropArea from "./EpicDropArea"
 
 const Main = () => {
     return (
@@ -30,7 +31,8 @@ const Main = () => {
             {/*본문 영역을 표시하는 박스*/}
             <div className="body">
                 {/* <OfficialArea /> */}
-                <ItemRatesArea />
+                {/* <ItemRatesArea /> */}
+                <EpicDropArea />
             </div>
         </>
     )
