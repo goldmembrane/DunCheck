@@ -4,6 +4,7 @@ import { Button } from "../Components/Button"
 import OfficialArea from "./OfficialArea"
 import ItemRatesArea from "./ItemRatesArea"
 import EpicDropArea from "./EpicDropArea"
+import BugReportArea from "./BugReportArea"
 
 const Main = () => {
     return (
@@ -32,7 +33,8 @@ const Main = () => {
             <div className="body">
                 {/* <OfficialArea /> */}
                 {/* <ItemRatesArea /> */}
-                <EpicDropArea />
+                {/* <EpicDropArea /> */}
+                <BugReportArea />
             </div>
         </>
     )
