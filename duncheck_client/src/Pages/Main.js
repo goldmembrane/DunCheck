@@ -9,6 +9,19 @@ const Main = () => {
                 <h1>DunCheck</h1>
             </div>
 
+            <div className="search-bar-box">
+
+                <div className="dropdown-box">
+                    <Text content = "Dropdown!" />
+                </div>
+
+                <div className="search-bar">
+                    <Text content = "Search Area!" />
+                </div>
+
+                <Button content = "검색" />
+            </div>
+
             <div className="body">
                 <div className="official article">
                     <Text content = "official article" />
