@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-box {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.search-bar-box {
+    text-align: center;
+}
+
+.dropdown-box {
+    display: inline-block;
+    width: 80px;
+    height: 28px;
+}
+
+.search-bar {
+    display: inline-block;
+    width: 400px;
+    height: 28px;
+}
+
+.search-button {
+    width: 60px;
+    height: 28px;
+}
