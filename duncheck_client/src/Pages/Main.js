@@ -5,12 +5,13 @@ import OfficialArea from "./OfficialArea"
 import ItemRatesArea from "./ItemRatesArea"
 import EpicDropArea from "./EpicDropArea"
 import BugReportArea from "./BugReportArea"
+import './css/Main.css'
 
 const Main = () => {
     return (
         <>
             {/*Logo 표시하는 박스*/}
-            <div>
+            <div className="logo-box">
                 <h1>DunCheck</h1>
             </div>
 
@@ -25,16 +26,16 @@ const Main = () => {
                     <Text content = "Search Area!" />
                 </div>
 
-                <Button content = "검색" />
+                <Button content = "검색" style = "search-button"/>
             </div>
 
 
             {/*본문 영역을 표시하는 박스*/}
             <div className="body">
-                {/* <OfficialArea /> */}
+                <OfficialArea />
                 {/* <ItemRatesArea /> */}
                 {/* <EpicDropArea /> */}
-                <BugReportArea />
+                {/* <BugReportArea /> */}
             </div>
         </>
     )
