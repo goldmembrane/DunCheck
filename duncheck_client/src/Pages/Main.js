@@ -34,8 +34,8 @@ const Main = () => {
             <div className="body">
                 {/* <OfficialArea /> */}
                 {/* <ItemRatesArea /> */}
-                <EpicDropArea />
-                {/* <BugReportArea /> */}
+                {/* <EpicDropArea /> */}
+                <BugReportArea />
             </div>
         </>
     )

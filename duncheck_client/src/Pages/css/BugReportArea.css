@@ -1,0 +1,24 @@
+.bug-report-and-getting-opinion-box {
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+    background-color: blue;
+    padding-bottom: 30px;
+}
+
+.bug-report-and-getting-opinion-title-box {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bug-report-and-getting-opinion-title {
+    font-size: 24px;
+}
+
+.bug-report-item-box {
+    width: 500px;
+    background-color: gray;
+    height: 400px;
+    margin: auto;
+}
