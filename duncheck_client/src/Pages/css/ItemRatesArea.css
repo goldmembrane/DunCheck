@@ -1,0 +1,57 @@
+.check-item-rates-title-box {
+    margin: auto;
+    margin-top: 100px;
+    width: 700px;
+}
+
+.check-item-rates-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.search-item-rates-bar-box {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.search-item-rates-bar {
+    width: 400px;
+    height: 30px;
+    background-color: yellow;
+    text-align: right;
+}
+
+.search-item-button {
+    width: 100px;
+    height: 30px;
+}
+
+.item-rates-changing-graph-box {
+    width: 600px;
+    height: 280px;
+    background-color: gray;
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.item-rates-changing-graph-title-box {
+    width: 200px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.item-rates-changing-graph-title {
+    text-align: center;
+    font-size: 24px;
+}
+
+.item-rates-changing-graph-content {
+    background-color: white;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+}
