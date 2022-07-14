@@ -33,8 +33,8 @@ const Main = () => {
             {/*본문 영역을 표시하는 박스*/}
             <div className="body">
                 {/* <OfficialArea /> */}
-                <ItemRatesArea />
-                {/* <EpicDropArea /> */}
+                {/* <ItemRatesArea /> */}
+                <EpicDropArea />
                 {/* <BugReportArea /> */}
             </div>
         </>

@@ -1,0 +1,75 @@
+.epic-drop-table-title-box {
+    margin: auto;
+    margin-top: 100px;
+    width: 500px;
+}
+
+.epic-drop-table-title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.epic-drop-table-map-box {
+    margin: auto;
+    margin-top: 50px;
+    width: 600px;
+}
+
+.epic-drop-level-range-box {
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.epic-drop-level-range-label {
+    font-size: 24px;
+}
+
+.epic-drop-level-range {
+    font-size: 24px;
+}
+
+.epic-drop-table-box {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    width: 600px;
+    background-color: blue;
+}
+
+.epic-drop-dungeon-box {
+    width: 300px;
+    background-color: aqua;
+}
+
+.epic-drop-dungeon-title-box {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.epic-drop-dungeon-item {
+    display: 1;
+}
+
+.epic-drop-dungeon-button {
+    width: 150px;
+    height: 45px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-size: 12px;
+}
+
+.epic-drop-list-box {
+    width: 300px;
+    background-color: aliceblue;
+}
+
+.epic-drop-list-title-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
