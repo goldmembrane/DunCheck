@@ -5,6 +5,7 @@ import OfficialArea from "./OfficialArea"
 import ItemRatesArea from "./ItemRatesArea"
 import EpicDropArea from "./EpicDropArea"
 import BugReportArea from "./BugReportArea"
+import CharacterList from "./CharacterList"
 import './css/Main.css'
 
 const Main = () => {
@@ -35,7 +36,8 @@ const Main = () => {
                 {/* <OfficialArea /> */}
                 {/* <ItemRatesArea /> */}
                 {/* <EpicDropArea /> */}
-                <BugReportArea />
+                {/* <BugReportArea /> */}
+                <CharacterList />
             </div>
         </>
     )
