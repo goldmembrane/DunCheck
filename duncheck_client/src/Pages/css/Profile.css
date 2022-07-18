@@ -1,0 +1,43 @@
+.character-image-box {
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 500px;
+    background-color: blanchedalmond;
+}
+
+.character-adventure-box {
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+    height: 90px;
+    background-color: gray;
+    padding-top: 10px;
+}
+
+.adventure-name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nick-name {
+    text-align: center;
+}
+
+.equipment-custom-button {
+    margin-top: 20px;
+    height: 30px;
+    width: 100%;
+}
+
+.equipment-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.equipment-parts-box {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
