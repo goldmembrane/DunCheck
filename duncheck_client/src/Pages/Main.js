@@ -1,16 +1,18 @@
 import React from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
 import { Text } from '../Components/Text'
 import { Button } from "../Components/Button"
 import OfficialArea from "./OfficialArea"
 import ItemRatesArea from "./ItemRatesArea"
 import EpicDropArea from "./EpicDropArea"
 import BugReportArea from "./BugReportArea"
-import CharacterList from "./CharacterList"
 import './css/Main.css'
+
 
 const Main = () => {
     return (
-        <>
+        <Router>
             {/*Logo 표시하는 박스*/}
             <div className="logo-box">
                 <h1>DunCheck</h1>
@@ -30,16 +32,16 @@ const Main = () => {
                 <Button content = "검색" style = "search-button"/>
             </div>
 
-
-            {/*본문 영역을 표시하는 박스*/}
             <div className="body">
-                {/* <OfficialArea /> */}
-                {/* <ItemRatesArea /> */}
-                {/* <EpicDropArea /> */}
-                {/* <BugReportArea /> */}
-                <CharacterList />
+                <Switch>
+                    <Route exact path="/" component={OfficialArea} />
+                    <Route path = "/auction" component={ItemRatesArea}/>
+                    <Route path = "/epic" component={EpicDropArea} />
+                    <Route path = "/bug" component={BugReportArea} />
+                    <Route path = "/search" />
+                </Switch>
             </div>
-        </>
+        </Router>
     )
 }
 
